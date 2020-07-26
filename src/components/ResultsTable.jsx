@@ -10,6 +10,7 @@ const ResultsTable = ({ resultsTable }) => {
       <thead>
         <tr className="bg-white">
           <th className="px-4 py-2">Payment Number</th>
+          <th className="px-4 py-2">Date</th>
           <th className="px-4 py-2">Opening Balance</th>
           <th className="px-4 py-2">Scheduled PMT</th>
           <th className="px-4 py-2">Lump Sum</th>
@@ -23,6 +24,7 @@ const ResultsTable = ({ resultsTable }) => {
         {resultsTable.map((row, index) => (
           <tr key={index} className={(index + 1) % 2 === 0 ? 'bg-white hover:bg-blue-100 transition-all' : 'bg-gray-100 hover:bg-blue-100 transition-all'}>
             <td className="border px-4 py-2">{index + 1}</td>
+            <td className="border px-4 py-2 text-right">{row.currentDate}</td>
             <td className="border px-4 py-2 text-right">${Number(row.openingBalance).toLocaleString().split('.')[0]}</td>
             <td className="border px-4 py-2 text-right">${Number(row.schedPMT).toLocaleString().split('.')[0]}</td>
             <td className="border px-4 py-2 text-right">${Number(row.lumpSumAmount).toLocaleString().split('.')[0]}</td>

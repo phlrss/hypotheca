@@ -6,6 +6,7 @@ const initialState = {
   mortgageAmount: '',
   interestRate: '',
   amortization: '',
+  frequency: '',
   lumpSum: false,
   lumpSumAmount: '',
   startDate: '',
@@ -18,9 +19,10 @@ const stateMap = {
   0: 'mortgageAmount',
   1: 'interestRate',
   2: 'amortization',
-  3: 'lumpSum',
-  4: 'lumpSumAmount',
-  5: 'startDate'
+  3: 'frequency',
+  4: 'lumpSum',
+  5: 'lumpSumAmount',
+  6: 'startDate'
 }
 
 const reducer = (state, action) => {
@@ -43,6 +45,12 @@ const reducer = (state, action) => {
         amortization: action.amortization,
         error: false
       }
+    case 'UPDATE_FREQUENCY':
+      return {
+        ...state,
+        frequency: action.frequency,
+        error: false
+      }
     case 'UPDATE_LUMP_SUM':
       return {
         ...state,
@@ -55,6 +63,12 @@ const reducer = (state, action) => {
         lumpSumAmount: action.lumpSumAmount,
         error: false
       }
+    case 'UPDATE_START_DATE':
+      return {
+        ...state,
+        startDate: action.date,
+        error: false
+      }
     case 'ERROR_STATE': {
       return {
         ...state,
@@ -64,8 +78,8 @@ const reducer = (state, action) => {
     }
     case 'PREV_STEP':
       let prevStep = state.stepNum - 1
-      if (state.stepNum === 5 && !state.lumpSum) {
-        prevStep = 3
+      if (state.stepNum === 6 && !state.lumpSum) {
+        prevStep = 4
       } else if (state.stepNum === 0) {
         prevStep = state.stepNum
       }
@@ -76,9 +90,9 @@ const reducer = (state, action) => {
       }
     case 'NEXT_STEP':
       let nextStep = state.stepNum + 1
-      if (state.stepNum === 3 && !state.lumpSum) {
-        nextStep = 5
-      } else if (state.stepNum === 4) {
+      if (state.stepNum === 4 && !state.lumpSum) {
+        nextStep = 6
+      } else if (state.stepNum === 6) {
         nextStep = state.stepNum
       }
       return {
@@ -96,10 +110,10 @@ const Questionnaire = ({ setResultsTable }) => {
   const validateValue = () => {
     const value = state[stateMap[state.stepNum]]
 
-    if (!value && state.stepNum !== 3) {
+    if (!value && ![3, 4].includes(state.stepNum)) {
       dispatch({ type: 'ERROR_STATE', message: 'Value is required' })
     }
-    else if (!parseInt(value) && state.stepNum !== 3) {
+    else if (!parseInt(value) && ![3, 4].includes(state.stepNum)) {
       dispatch({ type: 'ERROR_STATE', message: 'Invalid symbols in field' })
     } else {
       dispatch({ type: 'NEXT_STEP' })
@@ -120,6 +134,7 @@ const Questionnaire = ({ setResultsTable }) => {
             placeholder="$200000"
             value={state.mortgageAmount}
             onChange={ev => dispatch({ type: 'UPDATE_MORTGAGE', mortgage: ev.target.value })}
+            onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
         {state.stepNum === 1 && <div className="mb-3">
@@ -132,6 +147,7 @@ const Questionnaire = ({ setResultsTable }) => {
             placeholder="2.25%"
             value={state.interestRate}
             onChange={ev => dispatch({ type: 'UPDATE_INTEREST', interest: ev.target.value })}
+            onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
         {state.stepNum === 2 && <div className="mb-3">
@@ -144,9 +160,20 @@ const Questionnaire = ({ setResultsTable }) => {
             placeholder="25"
             value={state.amortization}
             onChange={ev => dispatch({ type: 'UPDATE_AMORTIZATION', amortization: ev.target.value })}
+            onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
         {state.stepNum === 3 && <div className="mb-3">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
+            How often will you be making payments?
+          </label>
+          <select onChange={ev => dispatch({ type: 'UPDATE_FREQUENCY', frequency: ev.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="monthly">Monthly</option>
+            <option value="biweekly">Bi-Weekly</option>
+            <option value="weekly">Weekly</option>
+          </select>
+        </div>}
+        {state.stepNum === 4 && <div className="mb-3">
           <label className="block text-gray-600 text-sm font-bold mb-2">
             Will you be making additional lump-sum payments?
           </label>
@@ -181,7 +208,7 @@ const Questionnaire = ({ setResultsTable }) => {
             </label>
           </div>
         </div>}
-        {state.stepNum === 4 && <div className="mb-3">
+        {state.stepNum === 5 && <div className="mb-3">
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is the additional lump-sum amount per regularly scheduled payment?
           </label>
@@ -191,6 +218,19 @@ const Questionnaire = ({ setResultsTable }) => {
             placeholder="$250"
             value={state.lumpSumAmount}
             onChange={ev => dispatch({ type: 'UPDATE_LUMP_AMOUNT', lumpSumAmount: ev.target.value })}
+            />
+        </div>}
+        {state.stepNum === 6 && <div className="mb-3">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
+            What is your mortgage start date?
+          </label>
+          <input
+            required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="YYYY-MM-DD"
+            value={state.startDate}
+            onChange={ev => dispatch({ type: 'UPDATE_START_DATE', date: ev.target.value })}
+            onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
         { state.error && <label className="text-sm text-red-600 font-bold mb-3">*{state.errorMessage}</label> }
@@ -205,13 +245,12 @@ const Questionnaire = ({ setResultsTable }) => {
               })}>
               Previous
           </button>
-          {state.stepNum !== 4 && !(state.stepNum === 3 && !state.lumpSum) && <button
-            disabled={state.stepNum === 4 || (state.stepNum === 3 && !state.lumpSum) || state.error}
+          {state.stepNum !== 6 && <button
             onClick={() => validateValue()}
             className="bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Next
           </button>}
-          {(state.stepNum === 4 || (state.stepNum === 3 && !state.lumpSum)) && <button
+          {state.stepNum === 6 && <button
             onClick={() => setResultsTable(generateResultsTable(state))}
             className="bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Finish
