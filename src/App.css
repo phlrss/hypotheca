@@ -6,10 +6,13 @@
 
 .landing {
   animation: slide-fade 1s;
+}
+
+.app {
   position: relative;
 }
 
-.landing::after {
+.app::after {
   content: "";
   background-image: url('./images/landing_background.jpg');
   background-position: center;

@@ -121,7 +121,7 @@ const Questionnaire = ({ setResultsTable }) => {
   }
 
   return (
-    <div className="flex flex-col w-full max-w-xl">
+    <div className="flex flex-col w-full max-w-xl p-2">
       <span className="mt-5 mb-2 font-bold text-gray-700">Just answer a few simple questions:</span>
       <div className="p-5 bg-white rounded flex flex-col shadow-md w-full">
         {state.stepNum === 0 && <div className="mb-3">

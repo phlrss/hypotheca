@@ -10,14 +10,14 @@ function App() {
   const [resultsTable, setResultsTable] = useState()
   return (
     <Router>
-      <div className="flex flex-col h-screen">
+      <div className="app flex flex-col h-screen">
         <Header />
         <Switch>
           <Route exact path="/">
             <LandingPage />
           </Route>
           <Route exact path="/calculate">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-auto justify-center overflow-y-auto">
               {!resultsTable && <Questionnaire setResultsTable={setResultsTable} />}
               {resultsTable && <ResultsTable resultsTable={resultsTable} />}
             </div>
