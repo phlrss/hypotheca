@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hypotheca/static/css/main.5f9f1712.chunk.css",
-    "main.js": "/hypotheca/static/js/main.da7cb3d5.chunk.js",
-    "main.js.map": "/hypotheca/static/js/main.da7cb3d5.chunk.js.map",
+    "main.js": "/hypotheca/static/js/main.a31723c7.chunk.js",
+    "main.js.map": "/hypotheca/static/js/main.a31723c7.chunk.js.map",
     "runtime-main.js": "/hypotheca/static/js/runtime-main.c5f5ff09.js",
     "runtime-main.js.map": "/hypotheca/static/js/runtime-main.c5f5ff09.js.map",
     "static/js/2.0d8629b8.chunk.js": "/hypotheca/static/js/2.0d8629b8.chunk.js",
     "static/js/2.0d8629b8.chunk.js.map": "/hypotheca/static/js/2.0d8629b8.chunk.js.map",
     "index.html": "/hypotheca/index.html",
-    "precache-manifest.3d8951f95047ab83559442f6e6fa9c5b.js": "/hypotheca/precache-manifest.3d8951f95047ab83559442f6e6fa9c5b.js",
+    "precache-manifest.e141545da7ff9caab2fe552c64a5d8ac.js": "/hypotheca/precache-manifest.e141545da7ff9caab2fe552c64a5d8ac.js",
     "service-worker.js": "/hypotheca/service-worker.js",
     "static/css/main.5f9f1712.chunk.css.map": "/hypotheca/static/css/main.5f9f1712.chunk.css.map",
     "static/js/2.0d8629b8.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.0d8629b8.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.c5f5ff09.js",
     "static/js/2.0d8629b8.chunk.js",
     "static/css/main.5f9f1712.chunk.css",
-    "static/js/main.da7cb3d5.chunk.js"
+    "static/js/main.a31723c7.chunk.js"
   ]
 }
