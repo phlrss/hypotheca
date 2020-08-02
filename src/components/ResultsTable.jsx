@@ -1,9 +1,12 @@
 import React from 'react'
+import { generateResultsTable } from '../services/resultsService';
 
-const ResultsTable = ({ resultsTable }) => {
-  if (!resultsTable) {
+const ResultsTable = ({ results }) => {
+  if (!results) {
     return null
   }
+
+  const resultsTable = generateResultsTable(results)
 
   return (
     <div className="w-screen md:justify-center flex overflow-auto">

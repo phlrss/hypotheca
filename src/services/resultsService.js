@@ -9,8 +9,6 @@ export const generateResultsTable = results => {
     lumpSumInt = parseInt(lumpSumAmount)
   }
 
-  console.log(moment(startDate).format('ll'))
-
   let paymentFrequency = 12
   let dateAdd
   switch(frequency) {
@@ -42,8 +40,6 @@ export const generateResultsTable = results => {
     const totalPMT = schedPMT + lumpSumInt
     const principal = Math.max(schedPMT - interest + lumpSumInt, 0)
     const endingBalance = Math.max(openingBalance - principal, 0)
-
-    console.log(currentDate)
 
     if(openingBalance <= 0) {
       break;

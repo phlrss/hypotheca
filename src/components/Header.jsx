@@ -6,7 +6,7 @@ const Header = () => {
     <div className="w-screen h-16 bg-green-600 text-white flex items-center justify-between p-12 border-box shadow">
       <Link to="/hypotheca" className="text-2xl font-bold">Hypotheca.io</Link>
       <div className="hidden lg:block">
-        <span className="mx-3">Calculate Mortgage</span>
+        <Link to="/calculate" className="mx-3">Calculate Mortgage</Link>
         <span className="mx-3">About Us</span>
       </div>
       <button className="block lg:hidden">
