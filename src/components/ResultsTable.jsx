@@ -9,7 +9,7 @@ const ResultsTable = ({ results }) => {
   const resultsTable = generateResultsTable(results)
 
   return (
-    <div className="w-screen md:justify-center flex overflow-auto">
+    <div className="w-screen lg:justify-center flex overflow-auto">
       <table className="table-auto">
         <thead>
           <tr className="bg-white">
