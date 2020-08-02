@@ -98,7 +98,7 @@ const QuickEdit = ({ resultsState = initialState, setResults }) => {
             required
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="$250"
-            value={state.lumpSumAmount}
+            value={state.lumpSumAmount || 0}
             onChange={ev => dispatch({ type: 'UPDATE_LUMP_AMOUNT', lumpSumAmount: ev.target.value })}
             onBlur={() => setResults(state)}
             />
