@@ -10,15 +10,17 @@ const QuickEdit = ({ resultsState = initialState, setResults }) => {
 
   return (
     <div className="w-full">
-      <button
-        onClick={() => setMenuOpen(true)}
-        className={cn(
-          'block lg:hidden m-3 border border-green-300 bg-gray-200 text-green-600 text-sm font-bold p-3 rounded-full shadow-md focus:outline-none focus:shadow-outline',
-          {
-            'hidden': menuOpen
-          })}>
-          Edit Mortgage Details
-      </button>
+      <div className="block lg:hidden w-full bg-white">
+        <button
+          onClick={() => setMenuOpen(true)}
+          className={cn(
+            'm-3 border border-green-300 bg-white text-green-600 text-sm font-bold p-3 rounded-full shadow-md focus:outline-none focus:shadow-outline',
+            {
+              'hidden': menuOpen
+            })}>
+            Edit Mortgage Details
+        </button>
+      </div>
       <div
         className={cn(
           'absolute h-full lg:h-auto flex-col lg:flex-row p-2 pt-3 mb-1 bg-white lg:items-center lg:justify-between rounded lg:flex shadow-md w-full lg:relative',
