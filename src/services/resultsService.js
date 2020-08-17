@@ -17,6 +17,7 @@ export const generateResultsTable = results => {
       dateAdd = { num: 1, type: 'months' }
       break;
     case 'biweekly':
+    case 'accbiweekly':
       paymentFrequency = 26
       dateAdd = { num: 14, type: 'days' }
       break;
@@ -32,11 +33,13 @@ export const generateResultsTable = results => {
   const period = amortization * paymentFrequency
   const rate = Math.pow((1+((interestRate/100)/2)),(2/paymentFrequency))-1
 
+  const isAccBiweekly = frequency === 'accbiweekly'
+
   for (let i = 0; i < period; i++) {
     const openingBalance = i === 0 ? parseInt(mortgageAmount) : resultsTable[i - 1].endingBalance
     const currentDate = i === 0 ? moment(startDate).format('MMM DD YYYY') : moment(resultsTable[i - 1].currentDate).add(dateAdd.num, dateAdd.type).format('MMM DD YYYY')
     const interest = openingBalance * rate
-    const schedPMT = Math.min(-1 * PMT((Math.pow(((interestRate/100/2)+1), 1/6) - 1)*12/paymentFrequency, period, mortgageAmount), openingBalance)
+    const schedPMT = Math.min(-1 * PMT((Math.pow(((interestRate/100/2)+1), 1/6) - 1)*12/(!isAccBiweekly ? paymentFrequency : 24), !isAccBiweekly ? period : (24 * amortization), mortgageAmount), openingBalance)
     const totalPMT = schedPMT + lumpSumInt
     const principal = Math.max(schedPMT - interest + lumpSumInt, 0)
     const endingBalance = Math.max(openingBalance - principal, 0)
