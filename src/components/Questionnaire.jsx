@@ -78,9 +78,11 @@ const Questionnaire = ({ setResults }) => {
           </label>
           <select onChange={ev => dispatch({ type: 'UPDATE_FREQUENCY', frequency: ev.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
             <option value="monthly">Monthly</option>
+            <option value="semimonthly">Semi-Monthly</option>
             <option value="biweekly">Bi-Weekly</option>
             <option value="accbiweekly">Acc. Bi-Weekly</option>
             <option value="weekly">Weekly</option>
+            <option value="accweekly">Acc. Weekly</option>
           </select>
         </div>}
         {state.stepNum === 4 && <div className="mb-3">
