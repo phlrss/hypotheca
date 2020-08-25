@@ -31,8 +31,8 @@ const Questionnaire = ({ setResults }) => {
 
   return (
     <div className="flex flex-col w-full max-w-xl p-2">
-      <span className="mt-5 mb-2 font-bold text-gray-700">Just answer a few simple questions:</span>
-      <div className="p-5 bg-white rounded flex flex-col shadow-md w-full">
+      {/* <span className="mt-5 mb-2 font-bold text-gray-700">Just answer a few simple questions:</span> */}
+      <div className="p-5 mt-4 bg-white rounded flex flex-col shadow-md w-full">
         {state.stepNum === 0 && <div className="mb-3">
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is your mortgage amount?
@@ -155,12 +155,12 @@ const Questionnaire = ({ setResults }) => {
               {
                 'cursor-not-allowed opacity-50': state.stepNum === 0
               })}>
-              Previous
+              Back
           </button>
           {state.stepNum !== 6 && <button
             onClick={() => validateValue()}
             className="bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Next
+              Continue
           </button>}
           {state.stepNum === 6 && <Link
             onClick={() => setResults(state)}
