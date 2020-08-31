@@ -11,7 +11,7 @@ const LandingPage = () => {
             <span className="text-3xl md:text-5xl font-bold text-gray-600 mr-3">Mortgages made</span>
             <span className="text-3xl md:text-5xl font-bold text-green-600">easy</span>
           </div>
-          <span className="text-md md:text-lg font-bold text-gray-500 mt-8">Intelligent morrgage calculator that recommends the optimal payment strategy based on your preferences</span>
+          <span className="text-md md:text-lg font-bold text-gray-500 mt-8">Intelligent mortgage calculator that recommends the optimal payment strategy based on your preferences</span>
         </div>
         <img className="max-w-xs md:max-w-sm" src={LandingImage} alt="landing_pic" />
       </div>
