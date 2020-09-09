@@ -7,8 +7,8 @@ const LandingPage = () => {
     <div className="landing w-screen flex-auto flex flex-col items-center justify-center p-6">
       <div className="w-screen max-w-5xl flex flex-col lg:flex-row items-center justify-center lg:justify-between px-12 md:p-12 mb-10">
         <div className="flex flex-col mb-5">
-          <div className="flex">
-            <span className="text-3xl md:text-5xl font-bold text-gray-600 mr-3">Mortgages made</span>
+          <div className="block md:flex">
+            <span className="inline-flex text-3xl md:text-5xl font-bold text-gray-600 mr-3">Mortgages made</span>
             <span className="text-3xl md:text-5xl font-bold text-green-600">easy</span>
           </div>
           <span className="text-md md:text-lg font-bold text-gray-500 mt-8">Intelligent mortgage calculator that recommends the optimal payment strategy based on your preferences</span>

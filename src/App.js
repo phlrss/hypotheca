@@ -6,6 +6,7 @@ import Questionnaire from './components/Questionnaire';
 import ResultsTable from './components/ResultsTable';
 import LandingPage from './components/LandingPage';
 import QuickEdit from './components/QuickEdit';
+import FAQ from './components/FAQ';
 
 function App() {
   const [results, setResults] = useState()
@@ -27,6 +28,11 @@ function App() {
             <div className="flex flex-col flex-auto items-center overflow-y-auto">
               <QuickEdit resultsState={results} setResults={setResults} />
               <ResultsTable results={results} />
+            </div>
+          </Route>
+          <Route exact path="/faq">
+            <div className="flex flex-auto justify-center overflow-y-auto">
+              <FAQ />
             </div>
           </Route>
           <Route path="*">
