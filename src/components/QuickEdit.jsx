@@ -2,7 +2,7 @@ import React, { useReducer, useState } from 'react';
 import cn from 'classnames'
 import { initialState, questionnaireReducer as reducer } from '../reducers/questionnaireUtils'
 
-const QuickEdit = ({ resultsState = initialState, setResults }) => {
+export const QuickEdit = ({ resultsState = initialState, setResults }) => {
   const [state, dispatch] = useReducer(reducer, resultsState)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -110,5 +110,3 @@ const QuickEdit = ({ resultsState = initialState, setResults }) => {
     </div>
   )
 }
-
-export default QuickEdit

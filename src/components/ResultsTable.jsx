@@ -1,7 +1,7 @@
 import React from 'react'
 import { generateResultsTable } from '../services/resultsService';
 
-const ResultsTable = ({ results }) => {
+export const ResultsTable = ({ results }) => {
   if (!results) {
     return null
   }
@@ -43,5 +43,3 @@ const ResultsTable = ({ results }) => {
     </div>
   )
 }
-
-export default ResultsTable

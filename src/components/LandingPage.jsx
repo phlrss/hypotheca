@@ -2,9 +2,9 @@ import React from 'react'
 import LandingImage from '../images/landing_image.svg'
 import { Link } from 'react-router-dom'
 
-const LandingPage = () => {
+export const LandingPage = () => {
   return (
-    <div className="landing w-screen flex-auto flex flex-col items-center justify-center p-6">
+    <div className="landing w-screen h-screen flex flex-col items-center justify-center p-6">
       <div className="w-screen max-w-5xl flex flex-col lg:flex-row items-center justify-center lg:justify-between px-12 md:p-12 mb-10">
         <div className="flex flex-col mb-5">
           <div className="block md:flex">
@@ -23,5 +23,3 @@ const LandingPage = () => {
     </div>
   )
 }
-
-export default LandingPage

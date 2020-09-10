@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import Header from './components/Header';
-import Questionnaire from './components/Questionnaire';
-import ResultsTable from './components/ResultsTable';
-import LandingPage from './components/LandingPage';
-import QuickEdit from './components/QuickEdit';
-import FAQ from './components/FAQ';
+import { Header } from './components/Header';
+import { Questionnaire } from './components/Questionnaire';
+import { ResultsTable } from './components/ResultsTable';
+import { LandingPage } from './components/LandingPage';
+import { QuickEdit } from './components/QuickEdit';
+import { FAQ } from './components/FAQ';
+import { FAQTiles } from './components/FAQTiles';
 
 function App() {
   const [results, setResults] = useState()
@@ -36,7 +37,10 @@ function App() {
             </div>
           </Route>
           <Route path="*">
-            <LandingPage />
+            <div className="flex-auto overflow-auto">
+              <LandingPage />
+              <FAQTiles />
+            </div>
           </Route>
         </Switch>
       </div>

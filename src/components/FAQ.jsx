@@ -1,7 +1,7 @@
 import React from 'react'
 import { faqs } from '../services/faqService'
 
-const FAQ = () => {
+export const FAQ = () => {
   return (
     <div className="flex flex-col w-full max-w-xl p-2">
       <div className="p-5 mt-4 bg-white rounded flex flex-col shadow-md w-full">
@@ -16,5 +16,3 @@ const FAQ = () => {
       </div>
     </div>
 )}
-
-export default FAQ

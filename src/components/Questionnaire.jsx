@@ -13,7 +13,7 @@ const stateMap = {
   6: 'startDate'
 }
 
-const Questionnaire = ({ setResults }) => {
+export const Questionnaire = ({ setResults }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const validateValue = () => {
@@ -173,5 +173,3 @@ const Questionnaire = ({ setResults }) => {
     </div>
   )
 }
-
-export default Questionnaire

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
 
-const Header = () => {
+export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -31,5 +31,3 @@ const Header = () => {
     </div>
   )
 }
-
-export default Header
