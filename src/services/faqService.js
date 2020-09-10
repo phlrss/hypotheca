@@ -12,15 +12,15 @@ export const faqs = [
     answer: 'The default mortgage payment frequency is monthly. In Canada, there are six mortgage payment options available: Monthly, semi monthly, bi-weekly, accelerated bi-weekly, weekly, and accelerated weekly.'
   },
   {
-    question: 'What an the monthly mortgage payment option?',
+    question: 'What is a monthly mortgage payment option?',
     answer: '12 payments are made each year. The mortgage is paid once per month, on the same day each month.'
   },
   {
-    question: 'What an the semi monthly mortgage payment option?',
+    question: 'What is a semi monthly mortgage payment option?',
     answer: '24 payments are made each year. The mortgage is paid twice a month, either on the 1st and 15th or on the 16th and at the last day of the month. The total amount paid each year amounts to the same as the monthly option.'
   },
   {
-    question: 'What is an bi-weekly mortgage payment option?',
+    question: 'What is a bi-weekly mortgage payment option?',
     answer: '26 payments are made each year. The mortgage is paid every two weeks. The total amount paid per year amounts to the same as the monthly option.'
   },
   {
@@ -28,7 +28,7 @@ export const faqs = [
     answer: '26 payments are made each year. The mortgage is paid every two weeks. The payment amount is calculated by taking the monthly payment divided by two, amounting to approximately one extra payment made per year compared to the monthly option. Note: The accelerated option is an effective way to direct mortgage payments directly to the repayment of principal.'
   },
   {
-    question: 'What is an weekly mortgage payment option?',
+    question: 'What is a weekly mortgage payment option?',
     answer: '52 payments are made each year. The mortgage is paid every week. The total amount paid per year amounts to the same as the monthly option.'
   },
   {
