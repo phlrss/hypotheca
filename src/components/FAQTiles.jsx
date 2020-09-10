@@ -1,25 +1,26 @@
 import React from 'react'
 import { faqs } from '../services/faqService'
+import { Link } from 'react-router-dom'
 
-export const FAQTiles = () => {
+export const FAQTiles = ({ setFaqPosition }) => {
   return (
     <div className="w-full p-12 bg-gray-500 bg-opacity-25">
       <div className="flex justify-center">
         { faqs.filter((e, index) => index < 3).map((faq, index) => (
-          <div key={index} className="p-5 mb-5 mr-4 bg-white rounded flex flex-col shadow-md w-full max-w-sm">
+          <Link onClick={() => {setFaqPosition(index)}} to="/faq" key={index} className="text-left transition-all duration-300 hover:bg-gray-200 hover:cursor-pointer p-5 mb-5 mr-4 bg-white rounded flex items-center shadow-md w-full max-w-sm">
             <label className="block text-gray-700 font-bold mb-2">
               {faq.question}
             </label>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center">
         { faqs.filter((e, index) => index > 2 && index < 6).map((faq, index) => (
-          <div key={index} className="p-5 mr-4 bg-white rounded flex flex-col shadow-md w-full max-w-sm">
+          <Link onClick={() => {setFaqPosition(index + 3)}} to="/faq" key={index} className="text-left transition-all duration-300 hover:bg-gray-200 hover:cursor-pointer p-5 mr-4 bg-white rounded flex items-center shadow-md w-full max-w-sm">
             <label className="block text-gray-700 font-bold mb-2">
               {faq.question}
             </label>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

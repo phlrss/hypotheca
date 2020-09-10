@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
 
-export const Header = () => {
+export const Header = ({ setFaqPosition }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -10,7 +10,7 @@ export const Header = () => {
       <Link to="/hypotheca" className="text-2xl font-bold">LENDERIA</Link>
       <div className="hidden lg:block">
         <Link to="/calculate" className="mx-3">Calculate Mortgage</Link>
-        <Link to="/faq" className="mx-3">FAQ</Link>
+        <Link onClick={() => {setFaqPosition(0)}} to="/faq" className="mx-3">FAQ</Link>
         <span className="mx-3">About Us</span>
       </div>
       <button onClick={() => setMobileMenuOpen(true)} className="block lg:hidden">

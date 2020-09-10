@@ -11,14 +11,18 @@ import { FAQTiles } from './components/FAQTiles';
 
 function App() {
   const [results, setResults] = useState()
+  const [faqPosition, setFaqPosition] = useState()
 
   return (
     <Router>
       <div className="app flex flex-col h-screen">
-        <Header />
+        <Header setFaqPosition={setFaqPosition} />
         <Switch>
           <Route exact path="/">
-            <LandingPage />
+            <div className="flex-auto overflow-auto">
+              <LandingPage />
+              <FAQTiles setFaqPosition={setFaqPosition} />
+            </div>
           </Route>
           <Route exact path="/calculate">
             <div className="flex flex-auto justify-center overflow-y-auto">
@@ -33,13 +37,13 @@ function App() {
           </Route>
           <Route exact path="/faq">
             <div className="flex flex-auto justify-center overflow-y-auto">
-              <FAQ />
+              <FAQ faqPosition={faqPosition} />
             </div>
           </Route>
           <Route path="*">
             <div className="flex-auto overflow-auto">
               <LandingPage />
-              <FAQTiles />
+              <FAQTiles setFaqPosition={setFaqPosition} />
             </div>
           </Route>
         </Switch>
