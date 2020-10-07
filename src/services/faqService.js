@@ -41,7 +41,7 @@ export const faqs = [
   },
   {
     question: 'What does semi-annual compounding mean?',
-    answer: 'Semi-annual compounding refers to the fact that. The more frequent the compounding period, the higher the interest.'
+    answer: 'Semi-annual compounding is a term describing the interest factor charge, which is once every six months. The more frequent the compounding period, the higher the interest.'
   },
   {
     question: 'Why are mortgage interest rates compounded semi-annually?',

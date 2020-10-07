@@ -32,6 +32,21 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
         </button>
         <div className="mx-2">
           <label className="block text-gray-600 text-sm font-bold mb-2">
+            Start Date
+          </label>
+          <input
+            required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="YYYY-MM-DD"
+            value={state.startDate}
+            onChange={ev => dispatch({ type: 'UPDATE_START_DATE', date: ev.target.value })}
+            onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
+            />
+        </div>
+
+
+        <div className="mx-2">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
             Mortgage amount
           </label>
           <input
