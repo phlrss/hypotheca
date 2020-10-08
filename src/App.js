@@ -8,6 +8,7 @@ import { LandingPage } from './components/LandingPage';
 import { QuickEdit } from './components/QuickEdit';
 import { FAQ } from './components/FAQ';
 import { FAQTiles } from './components/FAQTiles';
+import { Question } from './components/Question';
 
 function App() {
   const [results, setResults] = useState()
@@ -22,6 +23,11 @@ function App() {
             <div className="flex-auto overflow-auto">
               <LandingPage />
               <FAQTiles setFaqPosition={setFaqPosition} />
+            </div>
+          </Route>
+          <Route exact path="/question">
+            <div className="flex flex-auto justify-center overflow-y-auto">
+              <Question />
             </div>
           </Route>
           <Route exact path="/calculate">

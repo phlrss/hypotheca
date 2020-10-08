@@ -41,6 +41,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
             value={state.startDate}
             onChange={ev => dispatch({ type: 'UPDATE_START_DATE', date: ev.target.value })}
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
+            onBlur={() => setResults(state)}
             />
         </div>
 
@@ -96,8 +97,10 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
           </label>
           <select
             value={state.frequency || 'monthly'}
-            onChange={ev => dispatch({ type: 'UPDATE_FREQUENCY', frequency: ev.target.value })}
-            onBlur={() => setResults(state)}
+            onChange={ev => {
+              dispatch({ type: 'UPDATE_FREQUENCY', frequency: ev.target.value })
+              setResults({...state, frequency: ev.target.value})
+            }}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
             <option value="monthly">Monthly</option>
             <option value="semimonthly">Semi-Monthly</option>

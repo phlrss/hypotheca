@@ -16,7 +16,7 @@ export const LandingPage = () => {
         <img className="max-w-xs md:max-w-sm" src={LandingImage} alt="landing_pic" />
       </div>
       <Link
-        to="/calculate"
+        to="/question"
         className="bg-green-600 text-white font-bold p-4 rounded-full shadow-md focus:outline-none focus:shadow-outline">
           Calculate your mortgage now
       </Link>

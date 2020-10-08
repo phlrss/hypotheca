@@ -1,3 +1,9 @@
+export const stateMap = [
+  'startDate',
+  'mortgageAmount',
+  'interestRate',
+  'amortization',
+]
 
 export const initialState = {
   mortgageAmount: '',
@@ -7,7 +13,7 @@ export const initialState = {
   lumpSum: false,
   lumpSumAmount: '',
   startDate: '',
-  stepNum: 0,
+  stepNum: stateMap[0],
   error: false,
   errorMessage: ''
 }
@@ -64,27 +70,19 @@ export const questionnaireReducer = (state, action) => {
       }
     }
     case 'PREV_STEP':
-      let prevStep = state.stepNum - 1
-      if (state.stepNum === 6 && !state.lumpSum) {
-        prevStep = 4
-      } else if (state.stepNum === 0) {
-        prevStep = state.stepNum
-      }
+      const current = stateMap.findIndex(e => e === state.stepNum)
+
       return {
         ...state,
-        stepNum: prevStep,
+        stepNum: current === 0 ? stateMap[0] : stateMap[current - 1],
         error: false
       }
     case 'NEXT_STEP':
-      let nextStep = state.stepNum + 1
-      if (state.stepNum === 4 && !state.lumpSum) {
-        nextStep = 6
-      } else if (state.stepNum === 6) {
-        nextStep = state.stepNum
-      }
+      const currentStep = stateMap.findIndex(e => e === state.stepNum)
+      console.log(currentStep)
       return {
         ...state,
-        stepNum: nextStep
+        stepNum: stateMap[currentStep] === stateMap[stateMap.length - 1] ? stateMap[currentStep] : stateMap[currentStep + 1]
       }
     default:
       throw new Error();
