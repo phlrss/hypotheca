@@ -3,16 +3,21 @@ export const stateMap = [
   'mortgageAmount',
   'interestRate',
   'amortization',
+  'personalFrequency',
+  'interestImportance',
+  'lumpSumImportance',
 ]
 
 export const initialState = {
   mortgageAmount: '',
   interestRate: '',
   amortization: '',
-  frequency: '',
-  lumpSum: false,
+  frequency: 'monthly',
   lumpSumAmount: '',
   startDate: '',
+  personalFrequency: '1',
+  interestImportance: '1',
+  lumpSumImportance: '1',
   stepNum: stateMap[0],
   error: false,
   errorMessage: ''
@@ -44,12 +49,6 @@ export const questionnaireReducer = (state, action) => {
         frequency: action.frequency,
         error: false
       }
-    case 'UPDATE_LUMP_SUM':
-      return {
-        ...state,
-        lumpSum: [true, 'true'].includes(action.lumpSum),
-        error: false
-      }
     case 'UPDATE_LUMP_AMOUNT':
       return {
         ...state,
@@ -60,6 +59,18 @@ export const questionnaireReducer = (state, action) => {
       return {
         ...state,
         startDate: action.date,
+        error: false
+      }
+    case 'UPDATE_PERSONAL_FREQUENCY':
+      return {
+        ...state,
+        personalFrequency: action.frequency,
+        error: false
+      }
+    case 'UPDATE_INTEREST_IMPORTANCE':
+      return {
+        ...state,
+        interestImportance: action.interest,
         error: false
       }
     case 'ERROR_STATE': {
@@ -79,7 +90,7 @@ export const questionnaireReducer = (state, action) => {
       }
     case 'NEXT_STEP':
       const currentStep = stateMap.findIndex(e => e === state.stepNum)
-      console.log(currentStep)
+
       return {
         ...state,
         stepNum: stateMap[currentStep] === stateMap[stateMap.length - 1] ? stateMap[currentStep] : stateMap[currentStep + 1]

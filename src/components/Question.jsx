@@ -14,13 +14,13 @@ export const Question = () => {
           <Link
             to="/calculate"
             className="transition-all duration-200 h-full w-full flex flex-row md:flex-col items-center rounded font-bold p-4 text-gray-700 hover:bg-gray-300 hover:shadow-md focus:outline-none focus:shadow-outline mb-2 md:mb-0 mr-0 md:mr-4">
-              <img className="flex-grow-0 w-24" src={SearchIcon} alt="search-icon" />
+              <img className="flex-grow-0 w-24 mb-2" src={SearchIcon} alt="search-icon" />
               <span className="flex-grow text-center">Searching for the optimal payment strategy</span>
           </Link>
           <Link
             to="/results"
             className="transition-all duration-200 h-full w-full flex flex-row md:flex-col items-center rounded font-bold p-4 text-gray-700 hover:bg-gray-300 hover:shadow-md focus:outline-none focus:shadow-outline">
-              <img className="flex-grow-0 w-24" src={CalculateIcon} alt="calculate-icon" />
+              <img className="flex-grow-0 w-24 mb-2" src={CalculateIcon} alt="calculate-icon" />
               <span className="flex-grow text-center">Ready to calculate your amortization schedule</span>
           </Link>
         </div>

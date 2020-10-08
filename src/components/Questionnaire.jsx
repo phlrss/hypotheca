@@ -20,7 +20,7 @@ export const Questionnaire = ({ setResults }) => {
           } else {
             dispatch({ type: 'NEXT_STEP' })
           }
-          break;
+          break
         case 'startDate':
           const split = value.split('-')
           if (isNaN(new Date(value).getFullYear())) {
@@ -30,11 +30,29 @@ export const Questionnaire = ({ setResults }) => {
           } else {
             dispatch({ type: 'NEXT_STEP' })
           }
-          break;
+          break
         default:
           dispatch({ type: 'NEXT_STEP' })
       }
     }
+  }
+
+  const getFrequency = () => {
+    const total = parseInt(state.personalFrequency) + parseInt(state.interestImportance) + parseInt(state.lumpSumImportance)
+    let frequency
+
+    if (total <= 3) {
+      frequency = 'monthly'
+    } else if (total <= 6) {
+      frequency = 'semimonthly'
+    } else if (total <= 9) {
+      frequency = 'accbiweekly'
+    } else if (total <= 12) {
+      frequency = 'accweekly'
+    }
+
+    dispatch({ type: 'UPDATE_FREQUENCY', frequency })
+    return frequency
   }
 
   return (
@@ -106,7 +124,40 @@ export const Questionnaire = ({ setResults }) => {
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
+        {state.stepNum === 'personalFrequency' && <div className="mb-3">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
+            How often do you get paid (i.e. for employment or self-employment income)
+          </label>
+          <select onChange={ev => dispatch({ type: 'UPDATE_PERSONAL_FREQUENCY', frequency: ev.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="1">Monthly</option>
+            <option value="2">Semi-Monthly</option>
+            <option value="3">Bi-Weekly</option>
+            <option value="4">Weekly</option>
+          </select>
+        </div>}
+        {state.stepNum === 'interestImportance' && <div className="mb-3">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
+            How important is it to you to save interest on your mortgage?
+          </label>
+          <select onChange={ev => dispatch({ type: 'UPDATE_INTEREST_IMPORTANCE', interest: ev.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="1">Not Important</option>
+            <option value="3">Important</option>
+          </select>
+        </div>}
+        {state.stepNum === 'lumpSumImportance' && <div className="mb-3">
+          <label className="block text-gray-600 text-sm font-bold mb-2">
+            How likely are you to make additional lump-sum payments on your mortgage?
+          </label>
+          <select onChange={ev => dispatch({ type: 'UPDATE_INTEREST_IMPORTANCE', interest: ev.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="1">Very Unlikely</option>
+            <option value="2">Unlikely</option>
+            <option value="3">Likely</option>
+            <option value="4">Very Likely</option>
+          </select>
+        </div>}
+
         { state.error && <label className="text-sm text-red-600 font-bold mb-3">*{state.errorMessage}</label> }
+
         <div className="w-full flex justify-between">
           <button
             disabled={state.stepNum === stateMap[0]}
@@ -124,7 +175,10 @@ export const Questionnaire = ({ setResults }) => {
               Continue
           </button>}
           {state.stepNum === stateMap[stateMap.length - 1] && <Link
-            onClick={() => setResults(state)}
+            onClick={() => {
+              const frequency = getFrequency()
+              setResults({ ...state, frequency })
+            }}
             to="/results"
             className="bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Finish
