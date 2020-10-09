@@ -15,12 +15,12 @@ export const FAQ = ({ faqPosition }) => {
   return (
     <div className="flex flex-col w-full max-w-xl p-2">
       <div className="p-5 mt-4 bg-white rounded flex flex-col shadow-md w-full">
-        {faqs.map((faq, index) => (<div key={index} className={`${index !== faqs.length - 1 ? `faq-tile-${index} mb-8` : `faq-tile-${index}`}`}>
+        {Object.keys(faqs).map(key => (<div key={key} className={`${key !== faqs.length - 1 ? `faq-tile-${key} mb-8` : `faq-tile-${key}`}`}>
             <label className="block text-gray-600 text-sm font-bold mb-2">
-              {`Q: ${faq.question}`}
+              {`Q: ${faqs[key].question}`}
             </label>
             <label className="block text-gray-500 text-sm font-bold mb-2">
-            {`A: ${faq.answer}`}
+            {`A: ${faqs[key].answer}`}
             </label>
         </div>))}
       </div>

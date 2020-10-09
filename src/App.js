@@ -9,6 +9,7 @@ import { QuickEdit } from './components/QuickEdit';
 import { FAQ } from './components/FAQ';
 import { FAQTiles } from './components/FAQTiles';
 import { Question } from './components/Question';
+import FrequencyResults from './components/FrequencyResults';
 
 function App() {
   const [results, setResults] = useState()
@@ -33,6 +34,11 @@ function App() {
           <Route exact path="/calculate">
             <div className="flex flex-auto justify-center overflow-y-auto">
               <Questionnaire setResults={setResults} />
+            </div>
+          </Route>
+          <Route exact path="/frequency">
+            <div className="flex flex-col flex-auto items-center overflow-y-auto">
+              <FrequencyResults results={results} />
             </div>
           </Route>
           <Route exact path="/results">
