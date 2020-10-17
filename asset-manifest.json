@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hypotheca/static/css/main.d41126c8.chunk.css",
-    "main.js": "/hypotheca/static/js/main.7179cea2.chunk.js",
-    "main.js.map": "/hypotheca/static/js/main.7179cea2.chunk.js.map",
+    "main.js": "/hypotheca/static/js/main.94d778ab.chunk.js",
+    "main.js.map": "/hypotheca/static/js/main.94d778ab.chunk.js.map",
     "runtime-main.js": "/hypotheca/static/js/runtime-main.c5f5ff09.js",
     "runtime-main.js.map": "/hypotheca/static/js/runtime-main.c5f5ff09.js.map",
-    "static/js/2.6fac582c.chunk.js": "/hypotheca/static/js/2.6fac582c.chunk.js",
-    "static/js/2.6fac582c.chunk.js.map": "/hypotheca/static/js/2.6fac582c.chunk.js.map",
+    "static/js/2.ad1e0e6c.chunk.js": "/hypotheca/static/js/2.ad1e0e6c.chunk.js",
+    "static/js/2.ad1e0e6c.chunk.js.map": "/hypotheca/static/js/2.ad1e0e6c.chunk.js.map",
     "index.html": "/hypotheca/index.html",
-    "precache-manifest.f21db917c14c0b89f7d9e97d9069474f.js": "/hypotheca/precache-manifest.f21db917c14c0b89f7d9e97d9069474f.js",
+    "precache-manifest.eefaf010abae3e0282e6acf36c52e67e.js": "/hypotheca/precache-manifest.eefaf010abae3e0282e6acf36c52e67e.js",
     "service-worker.js": "/hypotheca/service-worker.js",
     "static/css/main.d41126c8.chunk.css.map": "/hypotheca/static/css/main.d41126c8.chunk.css.map",
-    "static/js/2.6fac582c.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.6fac582c.chunk.js.LICENSE.txt",
+    "static/js/2.ad1e0e6c.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.ad1e0e6c.chunk.js.LICENSE.txt",
     "static/media/calculate_icon.svg": "/hypotheca/static/media/calculate_icon.f0b94f31.svg",
     "static/media/App.css": "/hypotheca/static/media/landing_background.8fc0c519.jpg",
     "static/media/landing_image.svg": "/hypotheca/static/media/landing_image.43e45c65.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5f5ff09.js",
-    "static/js/2.6fac582c.chunk.js",
+    "static/js/2.ad1e0e6c.chunk.js",
     "static/css/main.d41126c8.chunk.css",
-    "static/js/main.7179cea2.chunk.js"
+    "static/js/main.94d778ab.chunk.js"
   ]
 }
