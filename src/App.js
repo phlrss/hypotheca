@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import { Header } from './components/Header';
 import { Questionnaire } from './components/Questionnaire';
-import { ResultsTable } from './components/ResultsTable';
 import { LandingPage } from './components/LandingPage';
 import { QuickEdit } from './components/QuickEdit';
 import { FAQ } from './components/FAQ';
 import { FAQTiles } from './components/FAQTiles';
 import { Question } from './components/Question';
 import FrequencyResults from './components/FrequencyResults';
+import { ResultsPage } from './components/ResultsPage';
+import { initialState } from './reducers/questionnaireUtils';
 
 function App() {
-  const [results, setResults] = useState()
+  const [results, setResults] = useState(initialState)
   const [faqPosition, setFaqPosition] = useState()
 
   return (
@@ -44,7 +45,7 @@ function App() {
           <Route exact path="/results">
             <div className="flex flex-col flex-auto items-center overflow-y-auto">
               <QuickEdit resultsState={results} setResults={setResults} />
-              <ResultsTable results={results} />
+              <ResultsPage results={results} />
             </div>
           </Route>
           <Route exact path="/faq">
