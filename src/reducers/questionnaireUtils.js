@@ -1,5 +1,3 @@
-const now = new Date()
-
 export const stateMap = [
   'startDate',
   'mortgageAmount',
@@ -11,12 +9,12 @@ export const stateMap = [
 ]
 
 export const initialState = {
-  mortgageAmount: '250000',
-  interestRate: '2.5',
-  amortization: '25',
+  mortgageAmount: '',
+  interestRate: '',
+  amortization: '',
   frequency: 'monthly',
   lumpSumAmount: '',
-  startDate: `${now.getFullYear()}-${now.getMonth() + 1 < 10 ? '0' + (now.getMonth() + 1) : now.getMonth() + 1}-${now.getDate() < 10 ? '0' + now.getDate() : now.getDate()}`,
+  startDate: '',
   personalFrequency: '1',
   interestImportance: '1',
   lumpSumImportance: '1',

@@ -49,7 +49,7 @@ export const ResultsChart = ({ results }) => {
         <div className="mt-3 text-sm">
           {`Zero balance date: ${resultsTable[resultsTable.length - 1]?.currentDate || 0}`}
           <br/>
-          {`Average scheduled payment: ${resultsTable[0]?.totalPMT || 0}`}
+          {`Average scheduled payment: $${resultsTable[0]?.totalPMT.toLocaleString() || 0}`}
           <br/>
           {`Total amortization: ${moment.duration(moment(resultsTable[resultsTable.length - 1]?.currentDate).diff(moment(resultsTable[0]?.currentDate))).asYears().toFixed(2) || 0}`}
           <br/>

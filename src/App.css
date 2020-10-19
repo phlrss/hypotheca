@@ -27,6 +27,38 @@
   z-index: -1;
 }
 
+.step-next {
+  position: relative;
+  animation: slide-next 0.5s;
+}
+
+.step-prev {
+  position: relative;
+  animation: slide-prev 0.5s;
+}
+
+@keyframes slide-next {
+  0% {
+    opacity: 0;
+    left: 600px
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slide-prev {
+  0% {
+    opacity: 0;
+    right: 600px
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
 @keyframes slide-fade {
   0% {
     opacity: 0;

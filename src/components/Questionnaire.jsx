@@ -2,9 +2,11 @@ import React, { useReducer } from 'react'
 import cn from 'classnames'
 import { Link } from 'react-router-dom'
 import { initialState, stateMap, questionnaireReducer as reducer } from '../reducers/questionnaireUtils'
+import { useState } from 'react'
 
 export const Questionnaire = ({ setResults }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [animation, setAnimation] = useState()
 
   const validateValue = () => {
     const value = state[state.stepNum]
@@ -19,6 +21,7 @@ export const Questionnaire = ({ setResults }) => {
             dispatch({ type: 'ERROR_STATE', message: 'Invalid symbols in field' })
           } else {
             dispatch({ type: 'NEXT_STEP' })
+            setAnimation('step-next')
           }
           break
         case 'startDate':
@@ -29,10 +32,12 @@ export const Questionnaire = ({ setResults }) => {
             dispatch({ type: 'ERROR_STATE', message: 'Invalid date format' })
           } else {
             dispatch({ type: 'NEXT_STEP' })
+            setAnimation('step-next')
           }
           break
         default:
           dispatch({ type: 'NEXT_STEP' })
+          setAnimation('step-next')
       }
     }
   }
@@ -58,8 +63,8 @@ export const Questionnaire = ({ setResults }) => {
   return (
     <div className="flex flex-col w-full max-w-xl p-2">
       {/* <span className="mt-5 mb-2 font-bold text-gray-700">Just answer a few simple questions:</span> */}
-      <div className="p-5 mt-4 bg-white rounded flex flex-col shadow-md w-full">
-        {state.stepNum === 'mortgageAmount' && <div className="mb-3">
+      <div className="p-5 mt-4 bg-white rounded flex flex-col shadow-md w-full overflow-hidden">
+        {state.stepNum === 'mortgageAmount' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is your mortgage amount?
           </label>
@@ -72,7 +77,7 @@ export const Questionnaire = ({ setResults }) => {
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
-        {state.stepNum === 'interestRate' && <div className="mb-3">
+        {state.stepNum === 'interestRate' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is your stated interest rate?
           </label>
@@ -85,7 +90,7 @@ export const Questionnaire = ({ setResults }) => {
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
-        {state.stepNum === 'amortization' && <div className="mb-3">
+        {state.stepNum === 'amortization' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is your mortgage amortization term (in years)?
           </label>
@@ -98,7 +103,7 @@ export const Questionnaire = ({ setResults }) => {
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
-        {state.stepNum === 'frequency' && <div className="mb-3">
+        {state.stepNum === 'frequency' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             How often will you be making payments?
           </label>
@@ -111,7 +116,7 @@ export const Questionnaire = ({ setResults }) => {
             <option value="accweekly">Acc. Weekly</option>
           </select>
         </div>}
-        {state.stepNum === 'startDate' && <div className="mb-3">
+        {state.stepNum === 'startDate' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             What is your mortgage start date?
           </label>
@@ -124,7 +129,7 @@ export const Questionnaire = ({ setResults }) => {
             onKeyUp={e => e.keyCode === 13 ? validateValue() : null}
             />
         </div>}
-        {state.stepNum === 'personalFrequency' && <div className="mb-3">
+        {state.stepNum === 'personalFrequency' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             How often do you get paid (i.e. for employment or self-employment income)
           </label>
@@ -135,7 +140,7 @@ export const Questionnaire = ({ setResults }) => {
             <option value="4">Weekly</option>
           </select>
         </div>}
-        {state.stepNum === 'interestImportance' && <div className="mb-3">
+        {state.stepNum === 'interestImportance' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             How important is it to you to save interest on your mortgage?
           </label>
@@ -144,7 +149,7 @@ export const Questionnaire = ({ setResults }) => {
             <option value="3">Important</option>
           </select>
         </div>}
-        {state.stepNum === 'lumpSumImportance' && <div className="mb-3">
+        {state.stepNum === 'lumpSumImportance' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
             How likely are you to make additional lump-sum payments on your mortgage?
           </label>
@@ -161,7 +166,10 @@ export const Questionnaire = ({ setResults }) => {
         <div className="w-full flex justify-between">
           <button
             disabled={state.stepNum === stateMap[0]}
-            onClick={() => dispatch({ type: 'PREV_STEP' })}
+            onClick={() => {
+              dispatch({ type: 'PREV_STEP' })
+              setAnimation('step-prev')
+            }}
             className={cn(
               'bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
               {
