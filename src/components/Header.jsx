@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
+import NAME from '../images/brand_name.png';
+import LOGO from '../images/brand_logo.png';
 
 export const Header = ({ setFaqPosition }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="w-screen h-16 bg-green-600 text-white flex items-center justify-between p-12 border-box shadow">
-      <Link to="/hypotheca" className="text-2xl font-bold">LENDERIA</Link>
+      <Link to="/hypotheca" className="flex items-center text-2xl font-bold">
+        <div className="p-2 shadow-md rounded-full bg-white">
+          <img style={{height: '35px'}} className="max-w-xs" src={LOGO} />
+        </div>
+        <img className="hidden ml-3 md:block relative w-32 max-w-xs" src={NAME} />
+      </Link>
       <div className="hidden lg:block">
         <Link to="/question" className="mx-3">Calculate Mortgage</Link>
         <Link onClick={() => {setFaqPosition(0)}} to="/faq" className="mx-3">FAQ</Link>
