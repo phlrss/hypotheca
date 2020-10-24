@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/hypotheca/static/css/main.f9fd004f.chunk.css",
-    "main.js": "/hypotheca/static/js/main.074a4ae4.chunk.js",
-    "main.js.map": "/hypotheca/static/js/main.074a4ae4.chunk.js.map",
+    "main.css": "/hypotheca/static/css/main.02941148.chunk.css",
+    "main.js": "/hypotheca/static/js/main.1848d9f8.chunk.js",
+    "main.js.map": "/hypotheca/static/js/main.1848d9f8.chunk.js.map",
     "runtime-main.js": "/hypotheca/static/js/runtime-main.c5f5ff09.js",
     "runtime-main.js.map": "/hypotheca/static/js/runtime-main.c5f5ff09.js.map",
-    "static/js/2.75e48a62.chunk.js": "/hypotheca/static/js/2.75e48a62.chunk.js",
-    "static/js/2.75e48a62.chunk.js.map": "/hypotheca/static/js/2.75e48a62.chunk.js.map",
+    "static/js/2.87cf507a.chunk.js": "/hypotheca/static/js/2.87cf507a.chunk.js",
+    "static/js/2.87cf507a.chunk.js.map": "/hypotheca/static/js/2.87cf507a.chunk.js.map",
     "index.html": "/hypotheca/index.html",
-    "precache-manifest.097a51a714f15cce58b2f938def90c76.js": "/hypotheca/precache-manifest.097a51a714f15cce58b2f938def90c76.js",
+    "precache-manifest.736db0e20e53881962f692645ec78afd.js": "/hypotheca/precache-manifest.736db0e20e53881962f692645ec78afd.js",
     "service-worker.js": "/hypotheca/service-worker.js",
-    "static/css/main.f9fd004f.chunk.css.map": "/hypotheca/static/css/main.f9fd004f.chunk.css.map",
-    "static/js/2.75e48a62.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.75e48a62.chunk.js.LICENSE.txt",
+    "static/css/main.02941148.chunk.css.map": "/hypotheca/static/css/main.02941148.chunk.css.map",
+    "static/js/2.87cf507a.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.87cf507a.chunk.js.LICENSE.txt",
+    "static/media/brand_logo.png": "/hypotheca/static/media/brand_logo.393af97f.png",
+    "static/media/brand_name.png": "/hypotheca/static/media/brand_name.e62411da.png",
     "static/media/calculate_icon.svg": "/hypotheca/static/media/calculate_icon.f0b94f31.svg",
     "static/media/App.css": "/hypotheca/static/media/landing_background.8fc0c519.jpg",
     "static/media/landing_image.svg": "/hypotheca/static/media/landing_image.43e45c65.svg",
@@ -19,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5f5ff09.js",
-    "static/js/2.75e48a62.chunk.js",
-    "static/css/main.f9fd004f.chunk.css",
-    "static/js/main.074a4ae4.chunk.js"
+    "static/js/2.87cf507a.chunk.js",
+    "static/css/main.02941148.chunk.css",
+    "static/js/main.1848d9f8.chunk.js"
   ]
 }
