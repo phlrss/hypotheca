@@ -70,6 +70,7 @@ export const Questionnaire = ({ setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="$200000"
             value={state.mortgageAmount}
@@ -83,6 +84,7 @@ export const Questionnaire = ({ setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="2.25%"
             value={state.interestRate}
@@ -96,6 +98,7 @@ export const Questionnaire = ({ setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="25"
             value={state.amortization}
@@ -118,7 +121,7 @@ export const Questionnaire = ({ setResults }) => {
         </div>}
         {state.stepNum === 'startDate' && <div className={`${animation} mb-3`}>
           <label className="block text-gray-600 text-sm font-bold mb-2">
-            What is your mortgage start date?
+            When is your mortgage start date?
           </label>
           <input
             required

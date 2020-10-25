@@ -43,7 +43,7 @@ export const generateResultsTable = results => {
 
   for (let i = 0; i < period; i++) {
     const openingBalance = i === 0 ? parseInt(mortgageAmount) : resultsTable[i - 1].endingBalance
-    const currentDate = i === 0 ? moment(startDate).format('MMM DD YYYY') : moment(resultsTable[i - 1].currentDate).add(dateAdd.num, dateAdd.type).format('MMM DD YYYY')
+    const currentDate = i === 0 ? moment(startDate).format('MMM D, YYYY') : moment(resultsTable[i - 1].currentDate).add(dateAdd.num, dateAdd.type).format('MMM D, YYYY')
     const interest = openingBalance * rate
     const schedPMT = getSchedPMT(interestRate, paymentFrequency, period, amortization, mortgageAmount, openingBalance, isAccBiweekly, isAccWeekly)
     const totalPMT = schedPMT + lumpSumInt

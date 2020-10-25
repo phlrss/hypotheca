@@ -18,7 +18,7 @@ export const ResultsChart = ({ results }) => {
     }
   })
   const data = {
-    labels: resultsTable.map(row => (row.currentDate.toString())),
+    labels: resultsTable.map(row => (row.currentDate.toString().split(',')[1])),
     datasets: [
       {
         label: "Remaining Balance",
@@ -46,15 +46,26 @@ export const ResultsChart = ({ results }) => {
       <div className="p-5 flex flex-col items-center w-full">
         <Line data={data} />
 
-        <div className="mt-3 text-sm">
-          {`Zero balance date: ${resultsTable[resultsTable.length - 1]?.currentDate || 0}`}
-          <br/>
-          {`Average scheduled payment: $${resultsTable[0]?.totalPMT.toLocaleString() || 0}`}
-          <br/>
-          {`Total amortization: ${moment.duration(moment(resultsTable[resultsTable.length - 1]?.currentDate).diff(moment(resultsTable[0]?.currentDate))).asYears().toFixed(2) || 0}`}
-          <br/>
-          {`Total interest paid $${Number(interestTable[interestTable.length - 1]).toLocaleString() || 0}`}
-        </div>
+        <table className="table-auto text-sm">
+          <tbody>
+            <tr className={'bg-white hover:bg-blue-100 transition-all'}>
+              <td className="border px-4 py-2">Zero balance date</td>
+              <td className="border px-4 py-2 text-right">{resultsTable[resultsTable.length - 1]?.currentDate || 0}</td>
+            </tr>
+            <tr className={'bg-white hover:bg-blue-100 transition-all'}>
+              <td className="border px-4 py-2">Average scheduled payment</td>
+              <td className="border px-4 py-2 text-right">{`$${resultsTable[0]?.totalPMT.toLocaleString() || 0}`}</td>
+            </tr>
+            <tr className={'bg-white hover:bg-blue-100 transition-all'}>
+              <td className="border px-4 py-2">Payback period</td>
+              <td className="border px-4 py-2 text-right">{`${moment.duration(moment(resultsTable[resultsTable.length - 1]?.currentDate).diff(moment(resultsTable[0]?.currentDate))).asYears().toFixed(1) || 0} (Years)`}</td>
+            </tr>
+            <tr className={'bg-white hover:bg-blue-100 transition-all'}>
+              <td className="border px-4 py-2">Total interest paid</td>
+              <td className="border px-4 py-2 text-right">${Number(interestTable[interestTable.length - 1]).toLocaleString() || 0}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   )

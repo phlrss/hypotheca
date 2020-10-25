@@ -31,11 +31,11 @@ export const FrequencyResults = ({ results }) => {
           <div className="text-3xl md:text-5xl font-bold text-gray-700">
             Based on your results, we suggest the
             <span className="ml-3 mr-3 text-3xl md:text-5xl font-bold text-green-600">{getFrequency(frequency)}</span>
-            payment schedule
+            payment option
           </div>
           <span className="text-md md:text-lg font-bold text-green-600 mt-8 mr-3">{faqs[frequency].question}</span>
           <span className="text-md md:text-lg font-bold text-gray-600 mt-3">{faqs[frequency].answer}</span>
-          <span className="text-md md:text-lg text-gray-600 mt-5">Feel free to view how different payment schedules affect your mortgage using the <strong>Payment Frequency</strong> dropdown on the next page</span>
+          <span className="text-md md:text-lg text-gray-600 mt-5">Feel free to view how different payment options affect your mortgage using the <strong>Payment Frequency</strong> dropdown on the next page</span>
         </div>
       </div>
       <Link

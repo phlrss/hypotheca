@@ -5,7 +5,7 @@ import CalculateIcon from '../images/calculate_icon.svg'
 
 export const Question = () => {
   return (
-    <div className="p-5">
+    <div className="landing p-5">
       <div className="p-5 bg-white rounded flex flex-col mt-5 shadow-md w-full">
         <label className="block text-gray-700 text-lg text-center font-bold mb-8">
           When it comes to mortgages, you are

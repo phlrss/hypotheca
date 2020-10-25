@@ -52,6 +52,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="$200000"
             value={state.mortgageAmount}
@@ -67,6 +68,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="2.25%"
             value={state.interestRate}
@@ -82,6 +84,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="25"
             value={state.amortization}
@@ -117,6 +120,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
           </label>
           <input
             required
+            type="number"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="$250"
             value={state.lumpSumAmount}

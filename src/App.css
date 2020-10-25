@@ -37,6 +37,10 @@
   animation: slide-prev 0.5s;
 }
 
+.table-col {
+  max-width: 150px;
+}
+
 @keyframes slide-next {
   0% {
     opacity: 0;
