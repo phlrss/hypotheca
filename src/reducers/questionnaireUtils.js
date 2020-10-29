@@ -1,11 +1,11 @@
 export const stateMap = [
+  'personalFrequency',
+  'interestImportance',
+  'lumpSumImportance',
   'startDate',
   'mortgageAmount',
   'interestRate',
   'amortization',
-  'personalFrequency',
-  'interestImportance',
-  'lumpSumImportance',
 ]
 
 export const initialState = {

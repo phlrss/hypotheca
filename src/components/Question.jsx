@@ -21,7 +21,7 @@ export const Question = () => {
             to="/results"
             className="transition-all duration-200 h-full w-full flex flex-row md:flex-col items-center rounded font-bold p-4 text-gray-700 hover:bg-gray-300 hover:shadow-md focus:outline-none focus:shadow-outline">
               <img className="flex-grow-0 w-24 mb-2" src={CalculateIcon} alt="calculate-icon" />
-              <span className="flex-grow text-center">Ready to calculate your amortization schedule</span>
+              <span className="flex-grow text-center">Ready to calculate your mortgage</span>
           </Link>
         </div>
       </div>

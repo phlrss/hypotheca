@@ -116,7 +116,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
 
         <div className="mx-2">
           <label className="block text-gray-600 text-sm font-bold mb-2">
-            Lump-sum amount
+            Additional Lump-sum
           </label>
           <input
             required

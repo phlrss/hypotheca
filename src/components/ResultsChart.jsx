@@ -41,6 +41,15 @@ export const ResultsChart = ({ results }) => {
     ]
   }
 
+  const frequencyMap = {
+    monthly: 'Monthly',
+    semimonthly: 'Semi-monthly',
+    biweekly: 'Bi-weekly',
+    accbiweekly: 'Bi-weekly',
+    weekly: 'Weekly',
+    accweekly: 'Weekly'
+  }
+
   return (
     <div className="bg-white rounded shadow-md w-full max-w-xl">
       <div className="p-5 flex flex-col items-center w-full">
@@ -54,7 +63,7 @@ export const ResultsChart = ({ results }) => {
             </tr>
             <tr className={'bg-white hover:bg-blue-100 transition-all'}>
               <td className="border px-4 py-2">Average scheduled payment</td>
-              <td className="border px-4 py-2 text-right">{`$${resultsTable[0]?.totalPMT.toLocaleString() || 0}`}</td>
+              <td className="border px-4 py-2 text-right">{`$${resultsTable[0]?.totalPMT.toLocaleString() || 0} (${frequencyMap[results.frequency]})`}</td>
             </tr>
             <tr className={'bg-white hover:bg-blue-100 transition-all'}>
               <td className="border px-4 py-2">Payback period</td>
