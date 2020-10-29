@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "971d3f5138bec1159e382bb4d6e5db28",
+    "revision": "88bdbe7706a69debe7998943681b8363",
     "url": "/hypotheca/index.html"
   },
   {
-    "revision": "37711a72278bfb4c1bad",
-    "url": "/hypotheca/static/css/main.31e1cad4.chunk.css"
+    "revision": "a6a2fd97b20df5d83641",
+    "url": "/hypotheca/static/css/main.20f86139.chunk.css"
   },
   {
     "revision": "fa873aadfd85aa7dbcba",
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hypotheca/static/js/2.87cf507a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "37711a72278bfb4c1bad",
-    "url": "/hypotheca/static/js/main.05069cdf.chunk.js"
+    "revision": "a6a2fd97b20df5d83641",
+    "url": "/hypotheca/static/js/main.5bc2d6db.chunk.js"
   },
   {
     "revision": "e49361a96038519f3ecf",
     "url": "/hypotheca/static/js/runtime-main.c5f5ff09.js"
-  },
-  {
-    "revision": "393af97f7b76505e19899326cf79aa4a",
-    "url": "/hypotheca/static/media/brand_logo.393af97f.png"
   },
   {
     "revision": "e62411daab6854e47adfabe7c38b4cce",
@@ -36,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hypotheca/static/media/calculate_icon.f0b94f31.svg"
   },
   {
-    "revision": "8fc0c51955573c8767a8abf81990033b",
-    "url": "/hypotheca/static/media/landing_background.8fc0c519.jpg"
+    "revision": "c6a66001aef0c94b946fb7c435818fbe",
+    "url": "/hypotheca/static/media/landing_background.c6a66001.jpg"
   },
   {
     "revision": "43e45c6571b56c3c13c838aa8064716f",
