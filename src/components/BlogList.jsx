@@ -4,7 +4,7 @@ import { blogs } from '../services/blogService'
 
 export const BlogList = () => {
   return (
-    <div className="flex flex-col justify-center md:flex-row flex-wrap p-5">
+    <div className="flex flex-col items-center md:items-start justify-center md:flex-row flex-wrap p-5">
       {blogs.map(e => (
         <BlogTile key={e.number} blog={e} />
       ))}
