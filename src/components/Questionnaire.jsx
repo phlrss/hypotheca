@@ -46,10 +46,8 @@ export const Questionnaire = ({ setResults }) => {
     const total = parseInt(state.personalFrequency) + parseInt(state.interestImportance) + parseInt(state.lumpSumImportance)
     let frequency
 
-    if (total <= 3) {
+    if (total <= 6) {
       frequency = 'monthly'
-    } else if (total <= 6) {
-      frequency = 'semimonthly'
     } else if (total <= 9) {
       frequency = 'accbiweekly'
     } else if (total <= 12) {
