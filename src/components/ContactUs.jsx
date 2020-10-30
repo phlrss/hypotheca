@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const ContactUs = () => {
+  useEffect(() => {
+    document.getElementById('app-body').scrollTop = 0
+  }, [])
+
   return (
-    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border">
+    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border app-main">
       <h1 className="text-3xl text-gray-800 mb-5">Contact Us</h1>
       <p>
         We are here to answer any of your questions regarding mortgages in general,

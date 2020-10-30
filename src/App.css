@@ -12,9 +12,13 @@
   position: relative;
 }
 
+.app-main {
+  min-height: calc(100vh - 8rem);
+}
+
 .app::after {
   content: "";
-  background-image: url('./images/landing_background.jpg');
+  background-image: url("./images/landing_background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,10 +45,23 @@
   max-width: 150px;
 }
 
+.mobile-menu {
+  animation: slide-next 0.5s;
+}
+
+.mobile-menu.hide {
+  animation: slide-out 0.5s;
+}
+
+.line-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 @keyframes slide-next {
   0% {
     opacity: 0;
-    left: 600px
+    left: 600px;
   }
   100% {
     opacity: 1;
@@ -52,10 +69,21 @@
   }
 }
 
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 600px;
+  }
+}
+
 @keyframes slide-prev {
   0% {
     opacity: 0;
-    right: 600px
+    right: 600px;
   }
   100% {
     opacity: 1;
@@ -66,10 +94,20 @@
 @keyframes slide-fade {
   0% {
     opacity: 0;
-    margin-top: 25px
+    margin-top: 25px;
   }
   100% {
     opacity: 1;
     margin-top: 0;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    top: -500px;
+  }
+  100% {
+    position: relative;
+    top: 0;
   }
 }

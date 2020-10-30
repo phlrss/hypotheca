@@ -19,6 +19,8 @@ import { Resources } from './components/Resources';
 import { TermsOfUse } from './components/TermsOfUse';
 import { Privacy } from './components/Privacy';
 import { Terminology } from './components/Terminology';
+import { BlogList } from './components/BlogList';
+import { Blog } from './components/Blog';
 
 function App() {
   const [results, setResults] = useState(initialState)
@@ -97,6 +99,11 @@ function App() {
                 <div className="flex-auto">
                   <Terminology />
                 </div>
+              </Route>
+              <Route path="/blogs/:id" component={Blog}>
+              </Route>
+              <Route path="/blogs">
+                <BlogList />
               </Route>
               <Route path="*">
                 <div className="flex-auto">

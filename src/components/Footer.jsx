@@ -22,7 +22,7 @@ export const Footer = () => {
   ]
 
   return (
-    <div className="flex flex-col md:flex-row justify-center p-8 bg-green-600">
+    <div className="flex flex-col md:flex-row justify-center p-16 md:p-8 bg-green-600">
       {sections.map(e => (
         <div key={e.header} className="flex flex-col my-3 md:my-0 mx-8 text-white">
           <h2 className="font-bold">{e.header}</h2>

@@ -36,9 +36,9 @@ export const Privacy = () => {
       </p>
       <p className="mt-4">
         Cookies &amp; Similar Technologies: Cookies are files with small amount of data, which may include an anonymous
-        unique identifier. Cookies are sent to your browser from a web site and stored on your computer’s hard drive.
+        unique identifier. Cookies are sent to your browser from a web site.
         Lenderia may use “cookies” to collect information and remarket to you. You can instruct your browser to
-        refuse all cookies or to indicate when a cookie is being sent. We may use cookies and other tracking technology
+        refuse all cookies or to indicate when a cookie is being sent. We may use cookies 
         to help us remember and process the items in your shopping cart, understand and save your preferences for
         future visits, keep track of advertisements and compile aggregate data about the Site’s traffic and interaction
         so that we can offer better experiences and tools in the future. We may also use these technologies to provide
@@ -48,11 +48,6 @@ export const Privacy = () => {
         Website Analytics: We may use third parties to help us gather and analyze information about the areas visited
         on the Website in order to better understand, evaluate and improve the user experience and the convenience of
         the Website.
-      </p>
-      <p className="mt-4">
-        Please understand, however, that no security system is impenetrable. We cannot guarantee the security of our
-        databases, nor can we guarantee that the information you supply will not be intercepted while being transmitted
-        to and from us over the Internet.
       </p>
       <p className="mt-4">
         We ensure that any third party acting on our behalf maintains reasonable and appropriate safeguards in respect

@@ -14,7 +14,7 @@ export const WhoWeAre = () => {
       </p>
       <p className="mt-4">
         Based in Montreal, Lenderia was founded in 2020 by two homeowners committed to making mortgages
-        easier to understand and more convenient. We are not affiliated with any lending institution or
+        easier to understand. We are not affiliated with any lending institution or
         mortgage broker and our goal is to provide transparent and impartial advice.
       </p>
     </div>
