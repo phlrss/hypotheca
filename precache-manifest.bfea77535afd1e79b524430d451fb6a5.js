@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "91d1f69853fbbc649c6835027edcb1c9",
+    "revision": "ac70af050da73393895e678ae1f19302",
     "url": "/hypotheca/index.html"
   },
   {
-    "revision": "3ba61bf0851e779753b8",
-    "url": "/hypotheca/static/css/main.20f86139.chunk.css"
+    "revision": "ba21b47099a2350ca343",
+    "url": "/hypotheca/static/css/main.73f32ea9.chunk.css"
   },
   {
-    "revision": "9b9db7e30e65a9746c98",
-    "url": "/hypotheca/static/js/2.f2ba1376.chunk.js"
+    "revision": "e80b03b1a4594a7eaecf",
+    "url": "/hypotheca/static/js/2.d57e14e1.chunk.js"
   },
   {
     "revision": "eaaf63558baae456918a991a401208d7",
-    "url": "/hypotheca/static/js/2.f2ba1376.chunk.js.LICENSE.txt"
+    "url": "/hypotheca/static/js/2.d57e14e1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3ba61bf0851e779753b8",
-    "url": "/hypotheca/static/js/main.7be2a8d4.chunk.js"
+    "revision": "ba21b47099a2350ca343",
+    "url": "/hypotheca/static/js/main.87d922a7.chunk.js"
   },
   {
     "revision": "e49361a96038519f3ecf",
     "url": "/hypotheca/static/js/runtime-main.c5f5ff09.js"
+  },
+  {
+    "revision": "b36e7c4b0274d9fc5f8aaa7fbdbae3bf",
+    "url": "/hypotheca/static/media/brand_logo_white.b36e7c4b.png"
   },
   {
     "revision": "e62411daab6854e47adfabe7c38b4cce",
