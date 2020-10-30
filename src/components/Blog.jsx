@@ -13,7 +13,7 @@ export const Blog = ({ match }) => {
 
   return (
     <div className="flex p-1 md:p-12">
-      {blog ? <div className="flex-1 flex flex-col p-5 md:p-32 md:pt-8 text-gray-700 font-bold text-sm box-border bg-white">
+      {blog ? <div className="landing flex-1 flex flex-col p-5 md:p-32 md:pt-8 text-gray-700 font-bold text-sm box-border bg-white">
         <div className="mb-5">
           <Link to="/blogs"><span className="text-blue-600">&lt; Back to blogs</span></Link>
           <h1 className="text-3xl text-gray-800 mb-1 mt-5">{blog.title}</h1>

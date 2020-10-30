@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NAME from '../images/brand_name.png';
-import LOGO from '../images/brand_logo.png';
+import LOGO from '../images/brand_logo_white.png';
 
 export const Header = ({ setFaqPosition }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -16,17 +16,18 @@ export const Header = ({ setFaqPosition }) => {
   }
 
   return (
-    <div className="w-screen h-16 bg-green-600 text-white flex items-center justify-between p-12 border-box shadow">
+    <div className="w-screen h-16 bg-green-600 text-white flex items-center justify-between pl-2 pr-4 py-12 md:p-12 border-box shadow">
       <Link to="/hypotheca" className="flex items-center text-2xl font-bold">
-        <div className="p-2 shadow-md rounded-full bg-white">
+        <div className="p-2">
           <img style={{ height: '35px' }} className="max-w-xs" src={LOGO} alt="logo" />
         </div>
-        <img className="hidden ml-3 md:block relative w-32 max-w-xs" src={NAME} alt="lenderia" />
+        <img className="mt-1 relative w-32 max-w-xs" src={NAME} alt="lenderia" />
       </Link>
       <div className="hidden lg:block">
         <Link to="/results" className="mx-3">Calculate Mortgage</Link>
         <Link to="/blogs" className="mx-3">Blog</Link>
         <Link onClick={() => { setFaqPosition(0) }} to="/faq" className="mx-3">FAQ</Link>
+        <Link to="/donate" className="mx-3">Donate</Link>
       </div>
       <button onClick={() => setMobileMenuOpen(true)} className="block lg:hidden">
         <svg className="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
@@ -39,6 +40,7 @@ export const Header = ({ setFaqPosition }) => {
           <Link onClick={() => collapseMenu()} to="/results" className="mx-3 mt-8 p-5 border-b-2">Calculate Mortgage</Link>
           <Link onClick={() => collapseMenu()} to="/blogs" className="mx-3 p-5 border-b-2">Blog</Link>
           <Link onClick={() => collapseMenu()} to="/faq" className="mx-3 p-5 border-b-2">FAQ</Link>
+          <Link onClick={() => collapseMenu()} to="/donate" className="mx-3 p-5 border-b-2">Donate</Link>
         </div>}
     </div>
   )

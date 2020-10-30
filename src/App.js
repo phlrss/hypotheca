@@ -31,7 +31,7 @@ function App() {
       <div className="app flex flex-col h-screen overflow-hidden">
         <Header setFaqPosition={setFaqPosition} />
         <div id="app-body" className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-          <div className="flex-1 mb-3">
+          <div className="flex-1 mb-3 app-main">
             <Switch>
               <Route exact path="/">
                 <div className="flex-auto">
