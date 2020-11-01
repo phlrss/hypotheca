@@ -9,7 +9,7 @@ export const QuickEdit = ({ resultsState = initialState, setResults }) => {
   const validateValue = () => {}
 
   return (
-    <div className="w-full relative lg:fixed">
+    <div className="w-full lg:fixed">
       <div className="block lg:hidden w-full bg-white">
         <button
           onClick={() => setMenuOpen(true)}
