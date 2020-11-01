@@ -14,7 +14,7 @@ export const ResultsTable = ({ results }) => {
         <table className="table-auto">
           <thead>
             <tr className="bg-green-600 text-white">
-              <th className="px-4 py-0 table-col">Payment #</th>
+              <th className="px-4 py-0 table-col">Payment</th>
               <th className="px-4 py-0 table-col">Payment</th>
               <th className="px-4 py-0 table-col">Opening</th>
               <th className="px-4 py-0 table-col">Scheduled</th>
@@ -25,7 +25,7 @@ export const ResultsTable = ({ results }) => {
               <th className="px-4 py-0 table-col">Ending</th>
             </tr>
             <tr className="bg-green-600 text-white">
-              <th className="px-4 py-0 table-col"></th>
+              <th className="px-4 py-0 table-col">#</th>
               <th className="px-4 py-0 table-col">Date</th>
               <th className="px-4 py-0 table-col">Balance</th>
               <th className="px-4 py-0 table-col">Payment</th>

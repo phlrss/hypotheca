@@ -7,7 +7,7 @@ export const ResultsPage = ({ results }) => {
   const [tabState, setTabState] = useState('table')
 
   return (
-    <div className='w-screen items-center flex flex-col'>
+    <div className='w-screen items-center flex flex-col mt-2 lg:mt-32'>
       <div className="shadow">
         <button
           className={`py-3 px-6 border border-b-0 focus:outline-none ${tabState === 'table' ? 'bg-white' : 'bg-gray-300'}`}

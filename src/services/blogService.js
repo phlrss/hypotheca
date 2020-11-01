@@ -621,5 +621,115 @@ export const blogs = [
         that best reflect the needs of each new homeowner.
       </p>
     </>
+  },
+  {
+    number: 7,
+    id: 'mortgage-deferral-is-it-right-for-me',
+    title: 'Mortgage deferral – is it right for me?',
+    date: '2020-11-01',
+    section: 'Mortgage',
+    author: 'Anthony',
+    email: 'info@lenderia.ca',
+    snippet: `In times of financial hardship, lending institutions may provide forbearance / 
+    mortgage deferral programs to homeowners. Although certain financial institutions frame 
+    the initiatives as “relief programs”, there are costs associated that need to be understood...`,
+    content: <>
+      <p className={SEPARATOR}>
+        In times of financial hardship, lending institutions may provide
+        forbearance / mortgage deferral programs to homeowners. Although certain
+        financial institutions frame the initiatives as “relief programs”, there
+        are costs associated that need to be understood.
+      </p>
+      <p className={SEPARATOR}>
+        First, let us delve into the details of what the mortgage deferral program
+        entails so that we understand the characteristics. By understanding the
+        forbearance terms, we will be better informed as whether the program is
+        worthwhile pursuing.
+      </p>
+      <p className={SEPARATOR}>
+        What is a mortgage deferral?
+      </p>
+      <p className={SEPARATOR}>
+        A mortgage deferral is the ability to delay mortgage payments (both
+        principal and interest) for a certain period of time, typically, for up to
+        six months. The deferral is agreed upon on a case-by-case basis with the
+        lending institution.
+      </p>
+      <p className={SEPARATOR}>
+        What happens to the interest on the mortgage?
+      </p>
+      <p className={SEPARATOR}>
+        All while the mortgage is being deferred (and no payments are being made),
+        interest will continue to accrue and will be added to the outstanding
+        balance when the mortgage deferral period ends.
+      </p>
+      <p className={SEPARATOR}>
+        How will the additional accrued interest be repaid?
+      </p>
+      <p className={SEPARATOR}>
+        Depending on the specific terms agreed upon with the lending institution,
+        the resumption of the mortgage payments can take any of the following three
+        forms:
+      </p>
+      <ol style={{ listStyle: 'inside decimal' }} className={`${SEPARATOR} ${INDENT}`}>
+        <li>
+          Resumption of regular payments be slightly higher to layer in the
+          accrued interest and principal that was deferred.
+        </li>
+        <li>
+          The amortization period is extended – Instead of the amortization term
+          being 25 years and 0 months, the amortization term is now 25 years and 6
+          months.
+        </li>
+        <li>
+          The deferred payments are added at the end of the mortgage term
+        </li>
+      </ol>
+      <p className={SEPARATOR}>
+        Note: some financial institutions may layer in the additional accrued
+        interest and blend it in as part of a revised “principal” balance. By doing
+        so, the lending institution is effectively charging interest on interest.
+        It is recommended to verify the forbearance agreement and clarify this
+        aspect with the lending institution. If this is the case, it is advised
+        that homeowners request a refund.
+      </p>
+      <p className={SEPARATOR}>
+        Using an example, let us calculate what the impact of a six-month deferral
+        will be on the following mortgage:
+      </p>
+      <ul style={{ listStyle: 'inside' }} className={`${SEPARATOR} ${INDENT}`}>
+        <li>
+          Mortgage = $400,000
+        </li>
+        <li>
+          Interest rate = 2.50%
+        </li>
+        <li>
+          Amortization term = 25 years
+        </li>
+        <li>
+          Payment frequency = Monthly
+        </li>
+        <li>
+          Total interest over amort. term (no deferral) = $137,559
+        </li>
+        <li>
+          Total interest over amort. Term (six-month deferral*) = $142,534
+        </li>
+        <li>
+          Implicit cost of six-month deferral = <strong>$4,974</strong>
+        </li>
+      </ul>
+      <p className={SEPARATOR}>
+        *At beginning of term
+      </p>
+      <p className={SEPARATOR}>
+        Ultimately, what it comes down to is whether the benefits of immediate cash
+        flow needs outweigh the drawbacks of the additional accrued interest to be
+        repaid. Further, if you find yourself in a position of financial hardship,
+        it is important to first rank the hierarchy of debt, both in terms of value
+        and interest percentage, prior to deciding which to service first.
+      </p>
+    </>
   }
 ]

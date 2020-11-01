@@ -1,6 +1,8 @@
 /* eslint-disable eqeqeq */
 import moment from 'moment';
 
+export const getMonthlyResults = results => (generateResultsTable({ ...results, frequency: 'monthly' }))
+
 export const generateResultsTable = results => {
   const resultsTable = []
   const { mortgageAmount, interestRate, amortization, lumpSumAmount, frequency, startDate } = results
@@ -11,7 +13,7 @@ export const generateResultsTable = results => {
 
   let paymentFrequency = 12
   let dateAdd
-  switch(frequency) {
+  switch (frequency) {
     case 'monthly':
       paymentFrequency = 12
       dateAdd = { num: 1, type: 'months' }
@@ -36,7 +38,7 @@ export const generateResultsTable = results => {
   }
 
   const period = amortization * paymentFrequency
-  const rate = Math.pow((1+((interestRate/100)/2)),(2/paymentFrequency))-1
+  const rate = Math.pow((1 + ((interestRate / 100) / 2)), (2 / paymentFrequency)) - 1
 
   const isAccBiweekly = frequency === 'accbiweekly'
   const isAccWeekly = frequency === 'accweekly'
@@ -50,7 +52,7 @@ export const generateResultsTable = results => {
     const principal = Math.max(schedPMT - interest + lumpSumInt, 0)
     const endingBalance = Math.max(openingBalance - principal, 0)
 
-    if(openingBalance <= 0) {
+    if (openingBalance <= 0) {
       break;
     }
 
@@ -70,25 +72,25 @@ export const generateResultsTable = results => {
 }
 
 const getSchedPMT = (interestRate, paymentFrequency, period, amortization, mortgageAmount, openingBalance, isAccBiweekly, isAccWeekly) => {
-  switch(true) {
+  switch (true) {
     case isAccBiweekly:
-      return Math.min(-1 * PMT((Math.pow(((interestRate/100/2)+1), 1/6) - 1), 12 * amortization, mortgageAmount) / 2, openingBalance)
+      return Math.min(-1 * PMT((Math.pow(((interestRate / 100 / 2) + 1), 1 / 6) - 1), 12 * amortization, mortgageAmount) / 2, openingBalance)
     case isAccWeekly:
-      return Math.min(-1 * PMT((Math.pow(((interestRate/100/2)+1), 1/6) - 1), 12 * amortization, mortgageAmount) / 4, openingBalance)
+      return Math.min(-1 * PMT((Math.pow(((interestRate / 100 / 2) + 1), 1 / 6) - 1), 12 * amortization, mortgageAmount) / 4, openingBalance)
     default:
-      return Math.min(-1 * PMT((Math.pow(((interestRate/100/2)+1), 1/6) - 1)*12/paymentFrequency, period, mortgageAmount), openingBalance)
+      return Math.min(-1 * PMT((Math.pow(((interestRate / 100 / 2) + 1), 1 / 6) - 1) * 12 / paymentFrequency, period, mortgageAmount), openingBalance)
   }
 }
 
 const roundToDecimals = (num) => {
-  return (Math.round(num*100)/100).toFixed(2)
+  return (Math.round(num * 100) / 100).toFixed(2)
 }
 
 const PMT = (rate, nper, pv, fv, type) => {
   if (!fv) fv = 0;
   if (!type) type = 0;
 
-  if (rate == 0) return -(pv + fv)/nper;
+  if (rate == 0) return -(pv + fv) / nper;
 
   var pvif = Math.pow(1 + rate, nper);
   var pmt = rate / (pvif - 1) * -(pv * pvif + fv);
