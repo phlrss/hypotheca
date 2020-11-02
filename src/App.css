@@ -8,6 +8,10 @@
   animation: slide-fade 1s;
 }
 
+.landing-page {
+  height: calc(100vh - 100px);
+}
+
 .app {
   position: relative;
 }

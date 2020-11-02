@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const LandingPage = () => {
   return (
-    <div className="landing w-screen h-screen flex flex-col items-center justify-center p-6 pt-0">
+    <div className="landing landing-page w-screen flex flex-col items-center justify-center p-6 pt-0">
       <div className="w-screen max-w-5xl flex flex-col lg:flex-row items-center justify-center lg:justify-between px-12 md:p-12 mb-4">
         <div className="flex flex-col mb-5">
           <div className="block md:flex">
