@@ -12,7 +12,7 @@ export const ResultsTable = ({ results }) => {
     <div className="w-screen lg:justify-center flex overflow-auto">
       <div className="p-3 bg-white shadow">
         <table className="table-auto">
-          <thead>
+          <thead className="block">
             <tr className="bg-green-600 text-white">
               <th className="px-4 py-0 table-col">Payment</th>
               <th className="px-4 py-0 table-col">Payment</th>
@@ -36,7 +36,7 @@ export const ResultsTable = ({ results }) => {
               <th className="px-4 py-0 table-col">Balance</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="block table-body">
             {resultsTable.map((row, index) => (
               <tr key={index} className={(index + 1) % 2 === 0 ? 'bg-white hover:bg-blue-100 transition-all' : 'bg-gray-100 hover:bg-blue-100 transition-all'}>
                 <td className="border px-4 py-2 table-col">{index + 1}</td>

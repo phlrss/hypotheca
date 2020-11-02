@@ -48,7 +48,13 @@
 }
 
 .table-col {
-  max-width: 150px;
+  width: 150px;
+}
+
+.table-body {
+  max-height: calc(100vh - 350px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .mobile-menu {
