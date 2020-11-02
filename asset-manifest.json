@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hypotheca/static/css/main.a84aa800.chunk.css",
+    "main.css": "/hypotheca/static/css/main.7a8f9308.chunk.css",
     "main.js": "/hypotheca/static/js/main.5e1456d3.chunk.js",
     "main.js.map": "/hypotheca/static/js/main.5e1456d3.chunk.js.map",
     "runtime-main.js": "/hypotheca/static/js/runtime-main.c5f5ff09.js",
@@ -8,9 +8,9 @@
     "static/js/2.68e47ed6.chunk.js": "/hypotheca/static/js/2.68e47ed6.chunk.js",
     "static/js/2.68e47ed6.chunk.js.map": "/hypotheca/static/js/2.68e47ed6.chunk.js.map",
     "index.html": "/hypotheca/index.html",
-    "precache-manifest.2a5c4af8d2e0b00e06ca7d926dbcfec9.js": "/hypotheca/precache-manifest.2a5c4af8d2e0b00e06ca7d926dbcfec9.js",
+    "precache-manifest.df65024a51c4cd98c137ced0607eebd2.js": "/hypotheca/precache-manifest.df65024a51c4cd98c137ced0607eebd2.js",
     "service-worker.js": "/hypotheca/service-worker.js",
-    "static/css/main.a84aa800.chunk.css.map": "/hypotheca/static/css/main.a84aa800.chunk.css.map",
+    "static/css/main.7a8f9308.chunk.css.map": "/hypotheca/static/css/main.7a8f9308.chunk.css.map",
     "static/js/2.68e47ed6.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.68e47ed6.chunk.js.LICENSE.txt",
     "static/media/brand_logo_white.png": "/hypotheca/static/media/brand_logo_white.b36e7c4b.png",
     "static/media/brand_name.png": "/hypotheca/static/media/brand_name.e62411da.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.c5f5ff09.js",
     "static/js/2.68e47ed6.chunk.js",
-    "static/css/main.a84aa800.chunk.css",
+    "static/css/main.7a8f9308.chunk.css",
     "static/js/main.5e1456d3.chunk.js"
   ]
 }
