@@ -49,6 +49,7 @@
 
 .table-col {
   width: 150px;
+  min-width: 150px;
 }
 
 .table-body {
@@ -121,5 +122,12 @@
   100% {
     position: relative;
     top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table-col {
+    width: 100px;
+    min-width: 100px;
   }
 }
