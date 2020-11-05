@@ -1,17 +1,24 @@
 {
   "files": {
     "main.css": "/hypotheca/static/css/main.7a8f9308.chunk.css",
-    "main.js": "/hypotheca/static/js/main.5e1456d3.chunk.js",
-    "main.js.map": "/hypotheca/static/js/main.5e1456d3.chunk.js.map",
+    "main.js": "/hypotheca/static/js/main.7752790d.chunk.js",
+    "main.js.map": "/hypotheca/static/js/main.7752790d.chunk.js.map",
     "runtime-main.js": "/hypotheca/static/js/runtime-main.c5f5ff09.js",
     "runtime-main.js.map": "/hypotheca/static/js/runtime-main.c5f5ff09.js.map",
-    "static/js/2.68e47ed6.chunk.js": "/hypotheca/static/js/2.68e47ed6.chunk.js",
-    "static/js/2.68e47ed6.chunk.js.map": "/hypotheca/static/js/2.68e47ed6.chunk.js.map",
+    "static/js/2.862e3504.chunk.js": "/hypotheca/static/js/2.862e3504.chunk.js",
+    "static/js/2.862e3504.chunk.js.map": "/hypotheca/static/js/2.862e3504.chunk.js.map",
     "index.html": "/hypotheca/index.html",
-    "precache-manifest.df65024a51c4cd98c137ced0607eebd2.js": "/hypotheca/precache-manifest.df65024a51c4cd98c137ced0607eebd2.js",
+    "precache-manifest.c11834d1b4098e14e6b067fe87f1e975.js": "/hypotheca/precache-manifest.c11834d1b4098e14e6b067fe87f1e975.js",
     "service-worker.js": "/hypotheca/service-worker.js",
     "static/css/main.7a8f9308.chunk.css.map": "/hypotheca/static/css/main.7a8f9308.chunk.css.map",
-    "static/js/2.68e47ed6.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.68e47ed6.chunk.js.LICENSE.txt",
+    "static/js/2.862e3504.chunk.js.LICENSE.txt": "/hypotheca/static/js/2.862e3504.chunk.js.LICENSE.txt",
+    "static/media/blog-1.svg": "/hypotheca/static/media/blog-1.6963cabc.svg",
+    "static/media/blog-2.svg": "/hypotheca/static/media/blog-2.9c45b165.svg",
+    "static/media/blog-3.svg": "/hypotheca/static/media/blog-3.fa3e7059.svg",
+    "static/media/blog-4.svg": "/hypotheca/static/media/blog-4.bb8b8ce9.svg",
+    "static/media/blog-5.svg": "/hypotheca/static/media/blog-5.de5f10c5.svg",
+    "static/media/blog-6.svg": "/hypotheca/static/media/blog-6.9ced524b.svg",
+    "static/media/blog-7.svg": "/hypotheca/static/media/blog-7.58898852.svg",
     "static/media/brand_logo_white.png": "/hypotheca/static/media/brand_logo_white.b36e7c4b.png",
     "static/media/brand_name.png": "/hypotheca/static/media/brand_name.e62411da.png",
     "static/media/calculate_icon.svg": "/hypotheca/static/media/calculate_icon.f0b94f31.svg",
@@ -21,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5f5ff09.js",
-    "static/js/2.68e47ed6.chunk.js",
+    "static/js/2.862e3504.chunk.js",
     "static/css/main.7a8f9308.chunk.css",
-    "static/js/main.5e1456d3.chunk.js"
+    "static/js/main.7752790d.chunk.js"
   ]
 }
