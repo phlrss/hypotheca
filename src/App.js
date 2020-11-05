@@ -36,7 +36,7 @@ function App() {
               <Route exact path="/">
                 <div className="flex-auto">
                   <LandingPage />
-                  <div className="bg-gray-500 shadow-md">
+                  <div className="bg-gray-500 bg-opacity-25 shadow-md">
                     <BlogList blogIds={['how-often-should-i-pay-my-mortgage-and-does-it-really-matter', 'working-from-home-you-may-be-eligible-for-a-home-related-tax-deduction', 'how-should-i-go-about-shopping-for-the-best-mortgage']} />
                   </div>
                   <FAQTiles setFaqPosition={setFaqPosition} />
