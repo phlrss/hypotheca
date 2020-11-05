@@ -7,6 +7,7 @@ export const BlogTile = ({ blog }) => {
     <Link to={`/blogs/${blog.id}`} className="flex flex-col bg-white p-3 my-3 md:m-3 shadow w-full max-w-sm">
       <span className="font-bold text-green-600 text-sm">{blog.section}</span>
       <span className="mt-1 text-xl font-bold">{blog.title}</span>
+      <img src={blog.image} className="mx-16 my-3" alt="blog-depiction" />
       <span className="mt-5 text-gray-600 text-sm flex-1">{blog?.snippet}</span>
       <div className="mt-2 flex flex-col items-end text-sm text-gray-800">
         <span>{`${blog.author}, Lenderia`}</span>

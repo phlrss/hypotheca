@@ -1,4 +1,5 @@
 import React from 'react';
+import { blog1, blog2, blog3, blog4, blog5, blog6, blog7 } from '../images/blogs'
 
 const SEPARATOR = 'mt-4'
 const INDENT = 'ml-5'
@@ -12,6 +13,7 @@ export const blogs = [
     section: 'Mortgage',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog1,
     snippet: `As part of purchasing a property, you may find yourself in a situation
     whereby you need to secure funding in order to finance the transaction.
     This funding is often referred to as obtaining...`,
@@ -102,6 +104,7 @@ export const blogs = [
     section: 'Tax',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog2,
     snippet: `In the age of COVID-19, you may find yourself working from home. Due to
     this, certain expenses ordinarily paid as part of general living costs may
     be eligible as a tax deduction...`,
@@ -171,6 +174,7 @@ export const blogs = [
     section: 'Tax',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog3,
     snippet: `For homeowners, the principal residence exemption is an income tax benefit
     that generally provides an exemption from tax on the capital gain realized
     when selling a property that is designated as the “principal residence”...`,
@@ -213,6 +217,7 @@ export const blogs = [
     section: 'Tax',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog4,
     snippet: `Moving from one location to another can be a stressful and perhaps
     exhausting experience. One potential benefit that can come out of it is the
     opportunity to use the moving costs as a tax deduction...`,
@@ -307,6 +312,7 @@ export const blogs = [
     section: 'Mortgage',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog5,
     snippet: `Not all mortgages are made equally. Additionally, not all mortgage lenders
     offer the same products. Taking it one step further, not all mortgage
     brokers have access to the same lenders and promotional offers...`,
@@ -516,6 +522,7 @@ export const blogs = [
     section: 'Mortgage',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog6,
     snippet: `In Canada, the Government wants to incentivize individuals to buy homes.
     One way of doing so is to provide Canadians with a non-refundable tax
     credit in the form of the Home Buyer’s Amount (HBA), another way...`,
@@ -630,6 +637,7 @@ export const blogs = [
     section: 'Mortgage',
     author: 'Anthony',
     email: 'info@lenderia.ca',
+    image: blog7,
     snippet: `In times of financial hardship, lending institutions may provide forbearance / 
     mortgage deferral programs to homeowners. Although certain financial institutions frame 
     the initiatives as “relief programs”, there are costs associated that need to be understood...`,
