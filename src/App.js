@@ -111,10 +111,14 @@ function App() {
               <Route path="*">
                 <div className="flex-auto">
                   <LandingPage />
-                  <div className="bg-gray-500 bg-opacity-25 shadow-md">
+                  <div className="flex flex-col items-center bg-gray-500 bg-opacity-25 shadow-md">
+                    <span className="text-center uppercase text-white bg-green-600 shadow rounded text-sm p-2 w-32 mt-5 max-w-xs">Featured blogs</span>
                     <BlogList blogIds={['how-often-should-i-pay-my-mortgage-and-does-it-really-matter', 'working-from-home-you-may-be-eligible-for-a-home-related-tax-deduction', 'how-should-i-go-about-shopping-for-the-best-mortgage']} />
                   </div>
-                  <FAQTiles setFaqPosition={setFaqPosition} />
+                  <div className="flex flex-col items-center">
+                    <span className="text-center uppercase text-white bg-green-600 shadow rounded text-sm p-2 w-32 mt-5 max-w-xs">FAQ</span>
+                    <FAQTiles setFaqPosition={setFaqPosition} />
+                  </div>
                 </div>
               </Route>
             </Switch>

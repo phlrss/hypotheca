@@ -1,5 +1,5 @@
 import React from 'react';
-import { blog1, blog2, blog3, blog4, blog5, blog6, blog7 } from '../images/blogs'
+import { blog1, blog2, blog3, blog4, blog5, blog6, blog7, blog8 } from '../images/blogs'
 
 const SEPARATOR = 'mt-4'
 const INDENT = 'ml-5'
@@ -737,6 +737,82 @@ export const blogs = [
         repaid. Further, if you find yourself in a position of financial hardship,
         it is important to first rank the hierarchy of debt, both in terms of value
         and interest percentage, prior to deciding which to service first.
+      </p>
+    </>
+  },
+  {
+    number: 8,
+    id: 'cra-expands-guidance-on-covid-19-employee-related-benefits',
+    title: 'CRA expands guidance on COVID-19 employee-related benefits',
+    date: '2020-11-06',
+    section: 'Tax, Homeownership',
+    author: 'Anthony',
+    email: 'info@lenderia.ca',
+    image: blog8,
+    snippet: `Due to COVID-19, the Canada Revenue Agency made some slight changes to how
+    certain employee expenses are treated from a tax perspective. The changes
+    are noted as follows...`,
+    content: <>
+      <p className={SEPARATOR}>
+        Due to COVID-19, the Canada Revenue Agency made some slight changes to how
+        certain employee expenses are treated from a tax perspective. The changes
+        are noted as follows:
+      </p>
+      <p className={SEPARATOR}>
+        <strong>Parking costs</strong>
+      </p>
+      <p className={SEPARATOR}>
+        In normal circumstances:
+      </p>
+      <p className={SEPARATOR}>
+        Employer-provided parking, if provided gratuitously, is a taxable benefit
+        to the employee.
+      </p>
+      <p className={SEPARATOR}>
+        During COVID-19:
+      </p>
+      <p className={SEPARATOR}>
+        Employer-provided parking will not be considered a taxable benefit to the
+        employee where the regular place of employment is closed during the
+        COVID-19 pandemic.
+      </p>
+      <p className={SEPARATOR}>
+        <strong>Commuting costs</strong>
+      </p>
+      <p className={SEPARATOR}>
+        In normal circumstances:
+      </p>
+      <p className={SEPARATOR}>
+        Car allowances not based on kilometers driven is a taxable benefit to the
+        employee.
+      </p>
+      <p className={SEPARATOR}>
+        During COVID-19:
+      </p>
+      <p className={SEPARATOR}>
+        Where an employee is reimbursed or receives a reasonable allowance for
+        travel expenses associated with travelling from home to their regular place
+        of employment during the pandemic, the amounts will not be considered as a
+        taxable benefit to the employee.
+      </p>
+      <p className={SEPARATOR}>
+        <strong>Home office equipment</strong>
+      </p>
+      <p className={SEPARATOR}>
+        In normal circumstances:
+      </p>
+      <p className={SEPARATOR}>
+        A reimbursement or allowance for personal computer equipment is a taxable
+        benefit to the employee.
+      </p>
+      <p className={SEPARATOR}>
+        During COVID-19:
+      </p>
+      <p className={SEPARATOR}>
+        A reimbursement or allowance of up to $500 for home office equipment
+        (including computer equipment, desks, chairs, etc.) will not be considered
+        a taxable benefit for the employee, however any amount above the threshold
+        is treated as a taxable benefit.
       </p>
     </>
   }
