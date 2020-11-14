@@ -71,6 +71,12 @@
   height: 0;
 }
 
+.blog-header {
+  background-color: #e3e3e3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230e8312' fill-opacity='0.25' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2367dc7c' fill-opacity='0.25' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%230f7917' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%235ecb7a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%23106e1a' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%2356ba77' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%2312641d' points='641 695 886 900 367 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%2351a973' points='587 900 641 695 886 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%23145a1e' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%234d996e' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%2315501e' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill-opacity='0.25' fill='%234a8868' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-size: contain;
+}
+
 @keyframes slide-next {
   0% {
     opacity: 0;
