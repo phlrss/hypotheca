@@ -97,7 +97,7 @@ function App() {
               <Route path="/blogs/:id" component={Blog}>
               </Route>
               <Route path="/blogs">
-                <BlogList />
+                <BlogList showSearch />
               </Route>
               <Route path="*">
                 <div className="flex-auto">
