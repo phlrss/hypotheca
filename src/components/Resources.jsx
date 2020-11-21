@@ -24,7 +24,7 @@ export const Resources = () => {
     }
   ]
   return (
-    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border">
+    <div className="flex flex-col py-12 p-3 md:py-32 md:px-12 text-gray-700 font-bold text-sm box-border max-w-full md:max-w-3xl bg-white shadow h-full">
       <h1 className="text-3xl text-gray-800 mb-1">Mortgage Resources</h1>
       {resources.map((e, index) => (
         <p key={index} className="mt-4">

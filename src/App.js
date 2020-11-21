@@ -33,15 +33,6 @@ function App() {
         <div id="app-body" className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           <div className="flex-1 mb-3 app-main">
             <Switch>
-              <Route exact path="/">
-                <div className="flex-auto">
-                  <LandingPage />
-                  <div className="bg-gray-500 bg-opacity-25 shadow-md">
-                    <BlogList blogIds={['how-often-should-i-pay-my-mortgage-and-does-it-really-matter', 'working-from-home-you-may-be-eligible-for-a-home-related-tax-deduction', 'how-should-i-go-about-shopping-for-the-best-mortgage']} />
-                  </div>
-                  <FAQTiles setFaqPosition={setFaqPosition} />
-                </div>
-              </Route>
               <Route exact path="/question">
                 <div className="flex flex-auto justify-center">
                   <Question />
@@ -69,22 +60,22 @@ function App() {
                 </div>
               </Route>
               <Route path="/who-we-are">
-                <div className="flex-auto">
+                <div className="h-full flex justify-center">
                   <WhoWeAre />
                 </div>
               </Route>
               <Route path="/contact-us">
-                <div className="flex-auto">
+                <div className="h-full flex justify-center">
                   <ContactUs />
                 </div>
               </Route>
               <Route path="/donate">
-                <div className="flex-auto">
+                <div className="h-full flex justify-center">
                   <Donate />
                 </div>
               </Route>
               <Route path="/resources">
-                <div className="flex-auto">
+                <div className="h-full flex justify-center">
                   <Resources />
                 </div>
               </Route>
@@ -99,7 +90,7 @@ function App() {
                 </div>
               </Route>
               <Route path="/terminology">
-                <div className="flex-auto">
+                <div className="h-full flex justify-center">
                   <Terminology />
                 </div>
               </Route>
@@ -112,7 +103,7 @@ function App() {
                 <div className="flex-auto">
                   <LandingPage />
                   <div className="flex flex-col items-center bg-gray-500 bg-opacity-25 shadow-md">
-                    <span className="text-center uppercase text-white bg-green-600 shadow rounded text-sm p-2 w-32 mt-5 max-w-xs">Featured blogs</span>
+                    <span className="text-center uppercase inline-flex text-white bg-green-600 shadow rounded text-sm p-2 mt-5">Featured blogs</span>
                     <BlogList blogIds={['how-often-should-i-pay-my-mortgage-and-does-it-really-matter', 'working-from-home-you-may-be-eligible-for-a-home-related-tax-deduction', 'how-should-i-go-about-shopping-for-the-best-mortgage']} />
                   </div>
                   <div className="flex flex-col items-center">

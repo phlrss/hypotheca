@@ -6,7 +6,7 @@ export const ContactUs = () => {
   }, [])
 
   return (
-    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border">
+    <div className="flex flex-col p-12 md:py-32 md:px-24 text-gray-700 font-bold text-sm box-border bg-white h-full shadow max-w-2xl">
       <h1 className="text-3xl text-gray-800 mb-5">Contact Us</h1>
       <p>
         We are here to answer any of your questions regarding mortgages in general,
@@ -19,7 +19,7 @@ export const ContactUs = () => {
       <p className="mt-4">
         Montreal, QC
       </p>
-      <p className="mt-4 text-blue-500 underline">
+      <p className="text-blue-500 underline">
         info@lenderia.ca
       </p>
     </div>

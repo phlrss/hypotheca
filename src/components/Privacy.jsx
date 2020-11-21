@@ -6,7 +6,7 @@ export const Privacy = () => {
   }, [])
 
   return (
-    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border">
+    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border md:mx-8 bg-white shadow">
       <h1 className="text-3xl text-gray-800 mb-5">Privacy</h1>
       <p>
         Lenderia is committed to protecting the privacy and confidentiality of information in our
@@ -16,7 +16,7 @@ export const Privacy = () => {
         well as through other interactions with our clients and prospective clients.
       </p>
       <p className="mt-4">
-        Lenderia currently does not collect or store any user data. Users will be notified of any changes made to the data collection 
+        Lenderia currently does not collect or store any user data. Users will be notified of any changes made to the data collection
         policy.
       </p>
       <p className="mt-4">
@@ -38,7 +38,7 @@ export const Privacy = () => {
         Cookies &amp; Similar Technologies: Cookies are files with small amount of data, which may include an anonymous
         unique identifier. Cookies are sent to your browser from a web site.
         Lenderia may use “cookies” to collect information and remarket to you. You can instruct your browser to
-        refuse all cookies or to indicate when a cookie is being sent. We may use cookies 
+        refuse all cookies or to indicate when a cookie is being sent. We may use cookies
         to help us remember and process the items in your shopping cart, understand and save your preferences for
         future visits, keep track of advertisements and compile aggregate data about the Site’s traffic and interaction
         so that we can offer better experiences and tools in the future. We may also use these technologies to provide

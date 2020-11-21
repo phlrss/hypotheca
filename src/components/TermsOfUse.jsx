@@ -6,7 +6,7 @@ export const TermsOfUse = () => {
   }, [])
 
   return (
-    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border">
+    <div className="flex flex-col p-12 md:p-32 text-gray-700 font-bold text-sm box-border bg-white md:mx-8 shadow">
       <h1 className="text-3xl text-gray-800 mb-5">Terms of use</h1>
       <p>
         By accessing this website (the “website”), you acknowledge these terms and conditions of use and agree to be bound by them.
